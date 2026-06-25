@@ -101,7 +101,7 @@
       <p class="muted" data-ko="이걸 매번 손으로 맞추기 번거로우니까, <b>Graph Styler가 프리셋 하나로 색·장력·글로우를 한 번에</b> 적용해줘요. 색 그룹도 내 폴더(또는 태그)에 자동으로 맞춰지고요." data-en="Doing all this by hand every time is tedious — so <b>Graph Styler applies color, forces, and glow in one preset</b>, and maps the colors to your folders (or tags) automatically.">이걸 매번 손으로 맞추기 번거로우니까, <b>Graph Styler가 프리셋 하나로 색·장력·글로우를 한 번에</b> 적용해줘요. 색 그룹도 내 폴더(또는 태그)에 자동으로 맞춰지고요.</p>
 
       <h3 data-ko="직접 해보기 — 글로우 CSS" data-en="Try it yourself — glow CSS">직접 해보기 — 글로우 CSS</h3>
-      <p class="muted small" data-ko="플러그인 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. (Graph Styler를 쓰면 이건 자동이에요.)" data-en="Want just the glow without the plugin? Save the code below as <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. (Graph Styler does this for you.)">플러그인 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. (Graph Styler를 쓰면 이건 자동이에요.)</p>
+      <p class="muted small" data-ko="플러그인 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)" data-en="Want just the glow without the plugin? Save the code below as <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. Built for dark mode. (Graph Styler does this for you.)">플러그인 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)</p>
       <div class="snippet">
         <pre><code>/* graph glow — .obsidian/snippets/graph-glow.css */
 .theme-dark .graph-view.color-circle { color: #7dd3fc; }
@@ -118,6 +118,7 @@
     <!-- INSTALL -->
     <section id="install" class="section">
       <h2 data-ko="설치 (처음이어도 OK)" data-en="Install (beginner-friendly)">설치 (처음이어도 OK)</h2>
+      <div class="tip" data-ko="💡 <b>다크 모드</b>에서 가장 예뻐요. <b>설정 → 화면 → 기본 색상: 어둡게</b>로 켜두세요 — 글로우·색은 다크 테마용이라 라이트 모드에선 밋밋해요." data-en="💡 Works best in <b>dark mode</b>. Turn it on in <b>Settings → Appearance → Base color scheme: Dark</b> — the glow and colors are built for dark themes.">💡 <b>다크 모드</b>에서 가장 예뻐요. <b>설정 → 화면 → 기본 색상: 어둡게</b>로 켜두세요 — 글로우·색은 다크 테마용이라 라이트 모드에선 밋밋해요.</div>
       <p class="muted" data-ko="옵시디언 <b>데스크탑 앱</b>이 필요해요. 아직 베타라 <b>BRAT</b>(깃허브에서 베타 플러그인을 바로 설치해주는 도구)으로 설치합니다 — 커뮤니티 스토어 등재 예정." data-en="You'll need the Obsidian <b>desktop app</b>. It's in beta, so you install it through <b>BRAT</b> (a tool that installs beta plugins straight from GitHub) — community store submission coming.">옵시디언 <b>데스크탑 앱</b>이 필요해요. 아직 베타라 <b>BRAT</b>(깃허브에서 베타 플러그인을 바로 설치해주는 도구)으로 설치합니다 — 커뮤니티 스토어 등재 예정.</p>
       <ol class="steps big-steps">
         <li><span class="n">1</span><span data-ko="<b>설정 → 커뮤니티 플러그인</b>으로 가서 '제한 모드'를 끄고 커뮤니티 플러그인을 켜요." data-en="Go to <b>Settings → Community plugins</b>, turn off Restricted mode, and enable community plugins."><b>설정 → 커뮤니티 플러그인</b>으로 가서 '제한 모드'를 끄고 커뮤니티 플러그인을 켜요.</span></li>
@@ -145,7 +146,7 @@
 
         <div class="prompt">
           <div class="prompt-head"><span class="prompt-label" data-ko="✨ 글로우 CSS 만들기" data-en="✨ Make a glow CSS">✨ 글로우 CSS 만들기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
-          <p class="prompt-text" data-ko="옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로." data-en="Write one Obsidian CSS snippet that adds a neon glow to the graph view: [cyan] nodes, dark background, soft glow. Use .graph-view.color-circle, the .graph-view-content background, and a canvas filter — as a single file.">옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로.</p>
+          <p class="prompt-text" data-ko="옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 다크 모드(.theme-dark) 기준으로, 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로." data-en="Write one Obsidian CSS snippet that adds a neon glow to the graph view: scoped to dark mode (.theme-dark): [cyan] nodes, dark background, soft glow. Use .graph-view.color-circle, the .graph-view-content background, and a canvas filter — as a single file.">옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 다크 모드(.theme-dark) 기준으로, 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로.</p>
         </div>
 
         <div class="prompt">
