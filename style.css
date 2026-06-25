@@ -196,3 +196,18 @@ code { background: rgba(255, 255, 255, 0.06); padding: 1px 6px; border-radius: 5
 @media (max-width: 460px) {
   .feature-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- how / snippet ---- */
+.section h3 { font-size: clamp(18px, 2.4vw, 22px); margin: 40px 0 12px; letter-spacing: -0.01em; }
+.how-grid { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.how-grid li { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
+.how-grid .hi { display: block; font-size: 22px; margin-bottom: 10px; }
+.how-grid b { display: block; font-size: 16px; margin-bottom: 6px; }
+.how-grid li > span:not(.hi) { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.how-grid code, .steps code { font-size: 0.9em; }
+.snippet { position: relative; margin: 16px 0; padding: 16px 18px; border-radius: 12px; background: #0a0f1d; border: 1px solid var(--border); overflow-x: auto; }
+.snippet pre { margin: 0; }
+.snippet code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; line-height: 1.6; color: #c8d6ea; background: none; padding: 0; white-space: pre; }
+.snippet .snippet-copy { position: absolute; top: 12px; right: 12px; }
+kbd { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 0.85em; font-family: ui-monospace, monospace; }
+@media (max-width: 700px) { .how-grid { grid-template-columns: 1fr; } }

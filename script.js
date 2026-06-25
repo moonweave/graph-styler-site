@@ -20,6 +20,11 @@
   document.querySelectorAll(".copy").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var text = btn.getAttribute("data-copy");
+      if (!text) {
+        var wrap = btn.closest(".snippet") || btn.parentElement;
+        var codeEl = wrap && wrap.querySelector("code");
+        text = codeEl ? codeEl.textContent : "";
+      }
       navigator.clipboard.writeText(text).then(function () {
         var lang = document.documentElement.lang;
         var label = btn.textContent;
