@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graph Styler — 옵시디언 그래프, 클릭 한 번으로</title>
+  <meta name="description" content="옵시디언 그래프 뷰를 클릭 한 번으로 예쁘게. 14가지 프리셋 + 나만의 테마. CSS도, 설정도 필요 없어요." />
+  <meta property="og:title" content="Graph Styler" />
+  <meta property="og:description" content="옵시디언 그래프, 클릭 한 번으로 예쁘게. One click, 14 themes." />
+  <meta property="og:image" content="assets/hero.png" />
+  <meta name="theme-color" content="#080b14" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2288%22>%F0%9F%8E%A8</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">🎨 Graph Styler</a>
+    <nav class="links">
+      <a href="#about" data-ko="소개" data-en="About">소개</a>
+      <a href="#presets" data-ko="프리셋" data-en="Presets">프리셋</a>
+      <a href="#install" data-ko="설치" data-en="Install">설치</a>
+      <a href="#usage" data-ko="사용법" data-en="Usage">사용법</a>
+    </nav>
+    <div class="lang">
+      <button class="lang-btn active" data-lang="ko">KO</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1 data-ko="옵시디언 그래프,<br>클릭 한 번으로." data-en="Your Obsidian graph,<br>one click away.">옵시디언 그래프,<br>클릭 한 번으로.</h1>
+        <p class="lead" data-ko="색 · 글로우 · 장력을 한 번에. CSS도, 설정도 필요 없어요." data-en="Color, glow, and forces in one tap. No CSS, no setup.">색 · 글로우 · 장력을 한 번에. CSS도, 설정도 필요 없어요.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener" data-ko="설치하기 →" data-en="Install →">설치하기 →</a>
+          <a class="btn ghost" href="#usage" data-ko="사용법 보기" data-en="See how">사용법 보기</a>
+        </div>
+      </div>
+      <figure class="hero-shot">
+        <img src="assets/hero.png" alt="Graph Styler in Obsidian" loading="eager" />
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 data-ko="이게 뭐냐면" data-en="What it is">이게 뭐냐면</h2>
+      <p class="big" data-ko="옵시디언 그래프는 스크린샷이 참 예쁘죠. 근데 그렇게 만들려면 색 그룹, 장력 슬라이더, CSS 스니펫을 다 뒤져야 합니다. <b>Graph Styler는 그걸 클릭 한 번으로.</b> 사이드 패널에서 무드 하나를 누르면 그래프가 바로 바뀝니다." data-en="The Obsidian graph looks great in screenshots, but getting there means fiddling with color groups, force sliders, and CSS. <b>Graph Styler does it in one click.</b> Pick a preset in the side panel and the graph restyles right away.">옵시디언 그래프는 스크린샷이 참 예쁘죠. 근데 그렇게 만들려면 색 그룹, 장력 슬라이더, CSS 스니펫을 다 뒤져야 합니다. <b>Graph Styler는 그걸 클릭 한 번으로.</b> 사이드 패널에서 무드 하나를 누르면 그래프가 바로 바뀝니다.</p>
+      <ul class="feature-grid">
+        <li><span class="fi">🎨</span><b data-ko="14가지 프리셋" data-en="14 presets">14가지 프리셋</b><em data-ko="네온부터 Nord·Dracula까지" data-en="From Neon to Nord & Dracula">네온부터 Nord·Dracula까지</em></li>
+        <li><span class="fi">🎛️</span><b data-ko="나만의 테마" data-en="Make your own">나만의 테마</b><em data-ko="슬라이더로 조절해 저장" data-en="Tune with sliders, then save">슬라이더로 조절해 저장</em></li>
+        <li><span class="fi">🌍</span><b data-ko="어떤 vault나" data-en="Any vault">어떤 vault나</b><em data-ko="색이 내 폴더(또는 태그)에 자동 매핑" data-en="Colors map to your folders (or tags)">색이 내 폴더(또는 태그)에 자동 매핑</em></li>
+        <li><span class="fi">↩︎</span><b data-ko="안전하게" data-en="Safe">안전하게</b><em data-ko="원본 백업 + 한 번에 되돌리기" data-en="Original backed up, restore anytime">원본 백업 + 한 번에 되돌리기</em></li>
+      </ul>
+    </section>
+
+    <!-- PRESETS -->
+    <section id="presets" class="section">
+      <h2 data-ko="같은 vault, 클릭 한 번 차이" data-en="Same vault, one click apart">같은 vault, 클릭 한 번 차이</h2>
+      <div class="gallery">
+        <figure><img src="assets/vaporwave.png" alt="Vaporwave preset" loading="lazy" /><figcaption>🌴 Vaporwave</figcaption></figure>
+        <figure><img src="assets/sunset.png" alt="Sunset preset" loading="lazy" /><figcaption>🌅 Sunset</figcaption></figure>
+      </div>
+      <div class="chips">
+        <span>⚡ Neon</span><span>🌌 Galaxy</span><span>🌠 Aurora</span><span>🌅 Sunset</span>
+        <span>🌴 Vaporwave</span><span>🌊 Ocean</span><span>🌲 Forest</span><span>🍬 Candy</span>
+        <span>✨ Gold</span><span>👾 Cyberpunk</span><span>❄️ Nord</span><span>🧛 Dracula</span>
+        <span>🐈 Catppuccin</span><span>⚪ Mono</span>
+      </div>
+    </section>
+
+    <!-- INSTALL -->
+    <section id="install" class="section">
+      <h2 data-ko="설치" data-en="Install">설치</h2>
+      <p class="muted" data-ko="아직 베타라 <b>BRAT</b>으로 설치해요 (커뮤니티 스토어 등재 예정)." data-en="It's in beta, so install via <b>BRAT</b> for now (community store submission coming).">아직 베타라 <b>BRAT</b>으로 설치해요 (커뮤니티 스토어 등재 예정).</p>
+      <ol class="steps">
+        <li><span class="n">1</span><span data-ko="커뮤니티 플러그인에서 <b>BRAT</b>을 설치해요." data-en="Install the <b>BRAT</b> community plugin.">커뮤니티 플러그인에서 <b>BRAT</b>을 설치해요.</span></li>
+        <li><span class="n">2</span><span data-ko="BRAT → <i>Add beta plugin</i> → 아래 주소 붙여넣기:" data-en="BRAT → <i>Add beta plugin</i> → paste this:">BRAT → <i>Add beta plugin</i> → 아래 주소 붙여넣기:</span></li>
+      </ol>
+      <div class="code"><code>moonweave/obsidian-graph-styler</code><button class="copy" data-copy="moonweave/obsidian-graph-styler" data-ko="복사" data-en="Copy">복사</button></div>
+      <ol class="steps" start="3">
+        <li><span class="n">3</span><span data-ko="커뮤니티 플러그인 목록에서 <b>Graph Styler</b>를 켜요." data-en="Enable <b>Graph Styler</b> in your community plugins.">커뮤니티 플러그인 목록에서 <b>Graph Styler</b>를 켜요.</span></li>
+      </ol>
+      <p class="muted small" data-ko="수동 설치: <code>main.js · manifest.json · styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code>에 넣고 켜기." data-en="Manual: drop <code>main.js · manifest.json · styles.css</code> into <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code> and enable.">수동 설치: <code>main.js · manifest.json · styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code>에 넣고 켜기.</p>
+    </section>
+
+    <!-- USAGE -->
+    <section id="usage" class="section">
+      <h2 data-ko="사용법" data-en="How to use">사용법</h2>
+      <ol class="steps big-steps">
+        <li><span class="n">1</span><span data-ko="그래프 뷰를 열고, 왼쪽 리본의 <b>🎨 팔레트 아이콘</b>을 누르면 오른쪽에 패널이 떠요." data-en="Open the graph view and click the <b>🎨 palette icon</b> in the left ribbon — a panel opens on the right.">그래프 뷰를 열고, 왼쪽 리본의 <b>🎨 팔레트 아이콘</b>을 누르면 오른쪽에 패널이 떠요.</span></li>
+        <li><span class="n">2</span><span data-ko="<b>프리셋을 누르면</b> 그래프가 즉시 바뀝니다. 패널은 열어둔 채 그래프를 움직여도 돼요." data-en="<b>Tap a preset</b> — the graph restyles instantly. Keep the panel open while you move the graph.">
+
+<b>프리셋을 누르면</b> 그래프가 즉시 바뀝니다. 패널은 열어둔 채 그래프를 움직여도 돼요.</span></li>
+        <li><span class="n">3</span><span data-ko="<b>🎛️ 커스터마이즈</b>를 열어 장력·크기·색·글로우를 슬라이더로 조절하고 <b>💾 저장</b>하면 내 프리셋이 돼요." data-en="Open <b>🎛️ Customize</b>, drag the force/size/color/glow sliders, and <b>💾 Save</b> it as your own preset.">
+
+<b>🎛️ 커스터마이즈</b>를 열어 장력·크기·색·글로우를 슬라이더로 조절하고 <b>💾 저장</b>하면 내 프리셋이 돼요.</span></li>
+        <li><span class="n">4</span><span data-ko="언제든 <b>↩︎ 원래대로 되돌리기</b>로 복구할 수 있어요. 원본 설정은 자동 백업됩니다." data-en="Hit <b>↩︎ Restore</b> anytime — your original config is backed up automatically.">언제든 <b>↩︎ 원래대로 되돌리기</b>로 복구할 수 있어요. 원본 설정은 자동 백업됩니다.</span></li>
+      </ol>
+      <p class="muted" data-ko="<b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다." data-en="<b>How do colors map?</b> The preset palette is assigned to your busiest folders (or tags, if you don't use folders). It writes to Obsidian's native graph groups, so you can tweak them in settings too.">
+
+<b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="section closer">
+      <h2 data-ko="당신의 선택은?" data-en="Your move.">당신의 선택은?</h2>
+      <a class="btn primary big" href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener" data-ko="GitHub에서 설치하기 →" data-en="Install from GitHub →">GitHub에서 설치하기 →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="made">made by <a href="https://github.com/moonweave" target="_blank" rel="noopener">Moonweave</a></div>
+    <div class="flinks">
+      <a href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/phd.ai.log/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="lic">MIT · Desktop only</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
