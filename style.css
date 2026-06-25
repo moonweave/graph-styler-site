@@ -211,3 +211,11 @@ code { background: rgba(255, 255, 255, 0.06); padding: 1px 6px; border-radius: 5
 .snippet .snippet-copy { position: absolute; top: 12px; right: 12px; }
 kbd { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 0.85em; font-family: ui-monospace, monospace; }
 @media (max-width: 700px) { .how-grid { grid-template-columns: 1fr; } }
+
+/* ---- ai prompts ---- */
+.prompts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
+.prompt { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; }
+.prompt-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.prompt-label { font-weight: 650; font-size: 14px; }
+.prompt-text { margin: 0; font-size: 13.5px; line-height: 1.65; color: var(--muted); }
+@media (max-width: 700px) { .prompts { grid-template-columns: 1fr; } }
