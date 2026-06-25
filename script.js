@@ -21,9 +21,9 @@
     btn.addEventListener("click", function () {
       var text = btn.getAttribute("data-copy");
       if (!text) {
-        var wrap = btn.closest(".snippet") || btn.parentElement;
-        var codeEl = wrap && wrap.querySelector("code");
-        text = codeEl ? codeEl.textContent : "";
+        var wrap = btn.closest(".snippet") || btn.closest(".prompt") || btn.parentElement;
+        var el = wrap && (wrap.querySelector(".prompt-text") || wrap.querySelector("code"));
+        text = el ? el.textContent : "";
       }
       navigator.clipboard.writeText(text).then(function () {
         var lang = document.documentElement.lang;

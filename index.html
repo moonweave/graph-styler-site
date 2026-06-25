@@ -20,6 +20,7 @@
       <a href="#presets" data-ko="프리셋" data-en="Presets">프리셋</a>
       <a href="#how" data-ko="원리" data-en="How">원리</a>
       <a href="#install" data-ko="설치" data-en="Install">설치</a>
+      <a href="#ai" data-ko="프롬프트" data-en="Prompts">프롬프트</a>
       <a href="#usage" data-ko="사용법" data-en="Usage">사용법</a>
     </nav>
     <div class="lang">
@@ -129,6 +130,34 @@
         <li><span class="n">5</span><span data-ko="끝! 그래프 뷰를 열고 왼쪽 리본의 <b>🎨 아이콘</b>을 누르면 패널이 떠요." data-en="Done! Open the graph view and click the <b>🎨 icon</b> in the left ribbon to open the panel.">끝! 그래프 뷰를 열고 왼쪽 리본의 <b>🎨 아이콘</b>을 누르면 패널이 떠요.</span></li>
       </ol>
       <p class="muted small" data-ko="수동 설치: <code>main.js · manifest.json · styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code>에 넣고 켜기." data-en="Manual: drop <code>main.js · manifest.json · styles.css</code> into <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code> and enable.">수동 설치: <code>main.js · manifest.json · styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code>에 넣고 켜기.</p>
+    </section>
+
+    <!-- AI PROMPTS -->
+    <section id="ai" class="section">
+      <h2 data-ko="🤖 AI로 더 꾸미기" data-en="🤖 Customize with AI">🤖 AI로 더 꾸미기</h2>
+      <p class="muted" data-ko="더 깊게 만지고 싶다면, 아래 프롬프트를 ChatGPT나 Claude에 복붙하세요. 결과(색·CSS·그룹 쿼리)를 <b>Graph Styler 커스터마이즈</b>나 <b>CSS 스니펫</b>에 그대로 넣으면 돼요. <code>[ ]</code> 부분만 내 걸로 바꾸세요." data-en="Want to go further? Paste any prompt below into ChatGPT or Claude, then drop the result (palette, CSS, group queries) into <b>Graph Styler's customizer</b> or a <b>CSS snippet</b>. Just swap the <code>[ ]</code> bits for your own.">더 깊게 만지고 싶다면, 아래 프롬프트를 ChatGPT나 Claude에 복붙하세요. 결과(색·CSS·그룹 쿼리)를 <b>Graph Styler 커스터마이즈</b>나 <b>CSS 스니펫</b>에 그대로 넣으면 돼요. <code>[ ]</code> 부분만 내 걸로 바꾸세요.</p>
+
+      <div class="prompts">
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="🎨 나만의 색 팔레트" data-en="🎨 Your own palette">🎨 나만의 색 팔레트</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="옵시디언 그래프용 색 테마를 만들어줘. '[깊은 바다]' 같은 무드로, 어두운 배경 1색 + 서로 잘 구분되는 노드 색 4개를 hex 코드로 줘. 각 색이 어떤 느낌인지 한 줄씩." data-en="Design a color theme for my Obsidian graph with a '[deep ocean]' mood: one dark background color plus four clearly distinct node colors, all as hex. One line on each color's feel.">옵시디언 그래프용 색 테마를 만들어줘. '[깊은 바다]' 같은 무드로, 어두운 배경 1색 + 서로 잘 구분되는 노드 색 4개를 hex 코드로 줘. 각 색이 어떤 느낌인지 한 줄씩.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="✨ 글로우 CSS 만들기" data-en="✨ Make a glow CSS">✨ 글로우 CSS 만들기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로." data-en="Write one Obsidian CSS snippet that adds a neon glow to the graph view: [cyan] nodes, dark background, soft glow. Use .graph-view.color-circle, the .graph-view-content background, and a canvas filter — as a single file.">옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="🗂️ 내 폴더 색 그룹" data-en="🗂️ Groups for my folders">🗂️ 내 폴더 색 그룹</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="내 옵시디언 폴더가 [Projects, Daily, Ideas]야. 각 폴더에 어울리는 조화로운 색을 hex로 정하고, 그래프 Groups에 넣을 path:&quot;폴더&quot; 쿼리 + 색 형태로 정리해줘." data-en="My Obsidian folders are [Projects, Daily, Ideas]. Pick a harmonious hex color for each, then list them as graph-group entries: a path:&quot;folder&quot; query plus its color.">내 옵시디언 폴더가 [Projects, Daily, Ideas]야. 각 폴더에 어울리는 조화로운 색을 hex로 정하고, 그래프 Groups에 넣을 path:&quot;폴더&quot; 쿼리 + 색 형태로 정리해줘.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="🔗 그래프 모양 다듬기" data-en="🔗 Shape up the graph">🔗 그래프 모양 다듬기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="내 옵시디언 그래프가 너무 뭉쳐 보여. forces(반발력·링크 거리·중심력)를 어떤 값으로 맞추면 시원하게 퍼질지, 그리고 노트를 어떻게 더 연결하면 그래프가 예뻐질지 알려줘." data-en="My Obsidian graph looks too clumped. What forces values (repel, link distance, center) would spread it out nicely, and how should I link my notes to make the graph prettier?">내 옵시디언 그래프가 너무 뭉쳐 보여. forces(반발력·링크 거리·중심력)를 어떤 값으로 맞추면 시원하게 퍼질지, 그리고 노트를 어떻게 더 연결하면 그래프가 예뻐질지 알려줘.</p>
+        </div>
+      </div>
     </section>
 
     <!-- USAGE -->
