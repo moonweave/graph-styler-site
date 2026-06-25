@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graph Styler — 옵시디언 그래프, 클릭 한 번으로</title>
+  <meta name="description" content="옵시디언 그래프 뷰를 클릭 한 번으로 예쁘게. 14가지 프리셋 + 나만의 테마. CSS도, 설정도 필요 없어요." />
+  <meta property="og:title" content="Graph Styler" />
+  <meta property="og:description" content="옵시디언 그래프, 클릭 한 번으로 예쁘게. One click, 14 themes." />
+  <meta property="og:image" content="assets/hero.png" />
+  <meta name="theme-color" content="#080b14" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2288%22>%F0%9F%8E%A8</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">🎨 Graph Styler</a>
+    <nav class="links">
+      <a href="#about" data-ko="소개" data-en="About">소개</a>
+      <a href="#presets" data-ko="프리셋" data-en="Presets">프리셋</a>
+      <a href="#how" data-ko="원리" data-en="How">원리</a>
+      <a href="#install" data-ko="설치" data-en="Install">설치</a>
+      <a href="#ai" data-ko="프롬프트" data-en="Prompts">프롬프트</a>
+      <a href="#usage" data-ko="사용법" data-en="Usage">사용법</a>
+    </nav>
+    <div class="lang">
+      <button class="lang-btn active" data-lang="ko">KO</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1 data-ko="옵시디언 그래프,<br>클릭 한 번으로." data-en="Your Obsidian graph,<br>one click away.">옵시디언 그래프,<br>클릭 한 번으로.</h1>
+        <p class="lead" data-ko="색 · 글로우 · 장력을 한 번에. CSS도, 설정도 필요 없어요." data-en="Color, glow, and forces in one tap. No CSS, no setup.">색 · 글로우 · 장력을 한 번에. CSS도, 설정도 필요 없어요.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener" data-ko="설치하기 →" data-en="Install →">설치하기 →</a>
+          <a class="btn ghost" href="#usage" data-ko="사용법 보기" data-en="See how">사용법 보기</a>
+        </div>
+      </div>
+      <figure class="hero-shot">
+        <img src="assets/hero.png" alt="Graph Styler in Obsidian" loading="eager" />
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 data-ko="이게 뭐냐면" data-en="What it is">이게 뭐냐면</h2>
+      <p class="big" data-ko="옵시디언 그래프는 스크린샷이 참 예쁘죠. 근데 그렇게 만들려면 색 그룹, 장력 슬라이더, CSS 스니펫을 다 뒤져야 합니다. <b>Graph Styler는 그걸 클릭 한 번으로.</b> 사이드 패널에서 무드 하나를 누르면 그래프가 바로 바뀝니다." data-en="The Obsidian graph looks great in screenshots, but getting there means fiddling with color groups, force sliders, and CSS. <b>Graph Styler does it in one click.</b> Pick a preset in the side panel and the graph restyles right away.">옵시디언 그래프는 스크린샷이 참 예쁘죠. 근데 그렇게 만들려면 색 그룹, 장력 슬라이더, CSS 스니펫을 다 뒤져야 합니다. <b>Graph Styler는 그걸 클릭 한 번으로.</b> 사이드 패널에서 무드 하나를 누르면 그래프가 바로 바뀝니다.</p>
+      <ul class="feature-grid">
+        <li><span class="fi">🎨</span><b data-ko="14가지 프리셋" data-en="14 presets">14가지 프리셋</b><em data-ko="네온부터 Nord·Dracula까지" data-en="From Neon to Nord & Dracula">네온부터 Nord·Dracula까지</em></li>
+        <li><span class="fi">🎛️</span><b data-ko="나만의 테마" data-en="Make your own">나만의 테마</b><em data-ko="슬라이더로 조절해 저장" data-en="Tune with sliders, then save">슬라이더로 조절해 저장</em></li>
+        <li><span class="fi">🌍</span><b data-ko="어떤 vault나" data-en="Any vault">어떤 vault나</b><em data-ko="색이 내 폴더(또는 태그)에 자동 매핑" data-en="Colors map to your folders (or tags)">색이 내 폴더(또는 태그)에 자동 매핑</em></li>
+        <li><span class="fi">↩︎</span><b data-ko="안전하게" data-en="Safe">안전하게</b><em data-ko="원본 백업 + 한 번에 되돌리기" data-en="Original backed up, restore anytime">원본 백업 + 한 번에 되돌리기</em></li>
+      </ul>
+    </section>
+
+    <!-- PRESETS -->
+    <section id="presets" class="section">
+      <h2 data-ko="같은 vault, 클릭 한 번 차이" data-en="Same vault, one click apart">같은 vault, 클릭 한 번 차이</h2>
+      <div class="gallery">
+        <figure><img src="assets/vaporwave.png" alt="Vaporwave preset" loading="lazy" /><figcaption>🌴 Vaporwave</figcaption></figure>
+        <figure><img src="assets/sunset.png" alt="Sunset preset" loading="lazy" /><figcaption>🌅 Sunset</figcaption></figure>
+      </div>
+      <div class="chips">
+        <span>⚡ Neon</span><span>🌌 Galaxy</span><span>🌠 Aurora</span><span>🌅 Sunset</span>
+        <span>🌴 Vaporwave</span><span>🌊 Ocean</span><span>🌲 Forest</span><span>🍬 Candy</span>
+        <span>✨ Gold</span><span>👾 Cyberpunk</span><span>❄️ Nord</span><span>🧛 Dracula</span>
+        <span>🐈 Catppuccin</span><span>⚪ Mono</span>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="section">
+      <h2 data-ko="그래프는 왜 예뻐 보일까" data-en="Why a graph looks good">그래프는 왜 예뻐 보일까</h2>
+      <p class="big" data-ko="옵시디언 그래프가 예쁜 건 사실 몇 가지가 합쳐진 결과예요. 원리만 알면 직접도 만들 수 있고, Graph Styler가 그걸 왜 한 번에 해주는지도 이해돼요." data-en="A pretty graph is really a few things working together. Once you know them you can do it by hand — and you'll see exactly what Graph Styler does for you in one click.">옵시디언 그래프가 예쁜 건 사실 몇 가지가 합쳐진 결과예요. 원리만 알면 직접도 만들 수 있고, Graph Styler가 그걸 왜 한 번에 해주는지도 이해돼요.</p>
+      <ul class="how-grid">
+        <li>
+          <span class="hi">🎨</span>
+          <b data-ko="색 그룹" data-en="Color groups">색 그룹</b>
+          <span data-ko="폴더나 태그별로 노드에 색을 입혀요. 그래프 뷰 안의 <b>설정 아이콘(톱니)</b> → <b>Groups</b>에서 쿼리(<code>path:&quot;폴더&quot;</code> 또는 <code>tag:#태그</code>)와 색을 정해요." data-en="Nodes get colored by folder or tag. Click the <b>settings (gear) icon</b> inside the graph view, open <b>Groups</b>, and set a query (<code>path:&quot;folder&quot;</code> or <code>tag:#tag</code>) with a color.">폴더나 태그별로 노드에 색을 입혀요. 그래프 뷰 안의 <b>설정 아이콘(톱니)</b> → <b>Groups</b>에서 쿼리(<code>path:&quot;폴더&quot;</code> 또는 <code>tag:#태그</code>)와 색을 정해요.</span>
+        </li>
+        <li>
+          <span class="hi">🧲</span>
+          <b data-ko="장력 (forces)" data-en="Forces">장력 (forces)</b>
+          <span data-ko="노드가 모이고 퍼지는 정도예요. 같은 설정 패널의 <b>Forces</b>에서 반발력·링크 거리·중심력 슬라이더로 조절해요. 반발력↑·링크거리↑ = 시원하게 퍼진 은하." data-en="How nodes gather or spread. Use the <b>Forces</b> sliders (repel, link distance, center) in that same graph-view panel. More repel + longer links = a wide, spread-out galaxy.">노드가 모이고 퍼지는 정도예요. 같은 설정 패널의 <b>Forces</b>에서 반발력·링크 거리·중심력 슬라이더로 조절해요. 반발력↑·링크거리↑ = 시원하게 퍼진 은하.</span>
+        </li>
+        <li>
+          <span class="hi">✨</span>
+          <b data-ko="글로우 · 배경" data-en="Glow &amp; background">글로우 · 배경</b>
+          <span data-ko="빛나는 네온 느낌은 <b>CSS 스니펫</b>으로 만들어요. <b>설정 → 화면 → CSS 스니펫</b>에 파일을 넣고 켜면 돼요. (바로 아래에 쓸 수 있는 코드가 있어요.)" data-en="The glowing neon look comes from a <b>CSS snippet</b>. Drop a file into <b>Settings → Appearance → CSS snippets</b> and toggle it on. (Ready-to-use code is right below.)">빛나는 네온 느낌은 <b>CSS 스니펫</b>으로 만들어요. <b>설정 → 화면 → CSS 스니펫</b>에 파일을 넣고 켜면 돼요. (바로 아래에 쓸 수 있는 코드가 있어요.)</span>
+        </li>
+        <li>
+          <span class="hi">🔗</span>
+          <b data-ko="모양 = 링크" data-en="Shape = links">모양 = 링크</b>
+          <span data-ko="그래프 <b>모양</b>은 노트를 <b>어떻게 연결(링크)했는지</b>가 만들어요. <code>[[노트]]</code>로 링크를 많이 걸수록 촘촘하게 이어진 별·은하 모양이 돼요. 예쁜 그래프는 잘 정리한 결과인 셈." data-en="The <b>shape</b> comes from <b>how you link your notes</b>. The more <code>[[wikilinks]]</code> you add, the denser and more constellation-like it gets. A pretty graph is the shape of a well-connected vault.">그래프 <b>모양</b>은 노트를 <b>어떻게 연결(링크)했는지</b>가 만들어요. <code>[[노트]]</code>로 링크를 많이 걸수록 촘촘하게 이어진 별·은하 모양이 돼요. 예쁜 그래프는 잘 정리한 결과인 셈.</span>
+        </li>
+      </ul>
+      <p class="muted" data-ko="이걸 매번 손으로 맞추기 번거로우니까, <b>Graph Styler가 프리셋 하나로 색·장력·글로우를 한 번에</b> 적용해줘요. 색 그룹도 내 폴더(또는 태그)에 자동으로 맞춰지고요." data-en="Doing all this by hand every time is tedious — so <b>Graph Styler applies color, forces, and glow in one preset</b>, and maps the colors to your folders (or tags) automatically.">이걸 매번 손으로 맞추기 번거로우니까, <b>Graph Styler가 프리셋 하나로 색·장력·글로우를 한 번에</b> 적용해줘요. 색 그룹도 내 폴더(또는 태그)에 자동으로 맞춰지고요.</p>
+
+      <h3 data-ko="직접 해보기 — 글로우 CSS" data-en="Try it yourself — glow CSS">직접 해보기 — 글로우 CSS</h3>
+      <p class="muted small" data-ko="플러그인 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)" data-en="Want just the glow without the plugin? Save the code below as <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. Built for dark mode. (Graph Styler does this for you.)">플러그인 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)</p>
+      <div class="snippet">
+        <pre><code>/* graph glow — .obsidian/snippets/graph-glow.css */
+.theme-dark .graph-view.color-circle { color: #7dd3fc; }
+.theme-dark .graph-view.color-line   { color: #2b4a63; }
+.theme-dark .graph-view.color-fill-tag { color: #f472b6; }
+.graph-view-content {
+  background: radial-gradient(circle at 50% 45%, #16304a, #0b1624 70%) !important;
+}
+.graph-view-content canvas { filter: saturate(1.35) brightness(1.12); }</code></pre>
+        <button class="copy snippet-copy" data-ko="복사" data-en="Copy">복사</button>
+      </div>
+    </section>
+
+    <!-- INSTALL -->
+    <section id="install" class="section">
+      <h2 data-ko="설치 (처음이어도 OK)" data-en="Install (beginner-friendly)">설치 (처음이어도 OK)</h2>
+      <div class="tip" data-ko="💡 <b>다크 모드</b>에서 가장 예뻐요. <b>설정 → 화면 → 기본 색상: 어둡게</b>로 켜두세요 — 글로우·색은 다크 테마용이라 라이트 모드에선 밋밋해요." data-en="💡 Works best in <b>dark mode</b>. Turn it on in <b>Settings → Appearance → Base color scheme: Dark</b> — the glow and colors are built for dark themes.">💡 <b>다크 모드</b>에서 가장 예뻐요. <b>설정 → 화면 → 기본 색상: 어둡게</b>로 켜두세요 — 글로우·색은 다크 테마용이라 라이트 모드에선 밋밋해요.</div>
+      <p class="muted" data-ko="옵시디언 <b>데스크탑 앱</b>이 필요해요. 아직 베타라 <b>BRAT</b>(깃허브에서 베타 플러그인을 바로 설치해주는 도구)으로 설치합니다 — 커뮤니티 스토어 등재 예정." data-en="You'll need the Obsidian <b>desktop app</b>. It's in beta, so you install it through <b>BRAT</b> (a tool that installs beta plugins straight from GitHub) — community store submission coming.">옵시디언 <b>데스크탑 앱</b>이 필요해요. 아직 베타라 <b>BRAT</b>(깃허브에서 베타 플러그인을 바로 설치해주는 도구)으로 설치합니다 — 커뮤니티 스토어 등재 예정.</p>
+      <ol class="steps big-steps">
+        <li><span class="n">1</span><span data-ko="<b>설정 → 커뮤니티 플러그인</b>으로 가서 '제한 모드'를 끄고 커뮤니티 플러그인을 켜요." data-en="Go to <b>Settings → Community plugins</b>, turn off Restricted mode, and enable community plugins."><b>설정 → 커뮤니티 플러그인</b>으로 가서 '제한 모드'를 끄고 커뮤니티 플러그인을 켜요.</span></li>
+        <li><span class="n">2</span><span data-ko="<b>탐색(Browse)</b>에서 <b>BRAT</b>을 검색해 설치하고 활성화해요." data-en="Click <b>Browse</b>, search <b>BRAT</b>, install it, and enable it."><b>탐색(Browse)</b>에서 <b>BRAT</b>을 검색해 설치하고 활성화해요.</span></li>
+        <li><span class="n">3</span><span data-ko="명령어 팔레트(<kbd>Cmd/Ctrl + P</kbd>)에서 <b>BRAT: Add a beta plugin</b>을 실행하거나, BRAT 설정의 <b>Add Beta Plugin</b> 칸을 열어 아래 주소를 붙여넣어요:" data-en="Run <b>BRAT: Add a beta plugin</b> from the command palette (<kbd>Cmd/Ctrl + P</kbd>) — or use the <b>Add Beta Plugin</b> field in BRAT's settings — and paste this:">명령어 팔레트(<kbd>Cmd/Ctrl + P</kbd>)에서 <b>BRAT: Add a beta plugin</b>을 실행하거나, BRAT 설정의 <b>Add Beta Plugin</b> 칸을 열어 아래 주소를 붙여넣어요:</span></li>
+      </ol>
+      <div class="code"><code>moonweave/obsidian-graph-styler</code><button class="copy" data-copy="moonweave/obsidian-graph-styler" data-ko="복사" data-en="Copy">복사</button></div>
+      <ol class="steps big-steps" start="4">
+        <li><span class="n">4</span><span data-ko="<b>설정 → 커뮤니티 플러그인 → 설치된 플러그인</b>에서 <b>Graph Styler</b>를 켜요." data-en="In <b>Settings → Community plugins → Installed plugins</b>, toggle <b>Graph Styler</b> on."><b>설정 → 커뮤니티 플러그인 → 설치된 플러그인</b>에서 <b>Graph Styler</b>를 켜요.</span></li>
+        <li><span class="n">5</span><span data-ko="끝! 그래프 뷰를 열고 왼쪽 리본의 <b>🎨 아이콘</b>을 누르면 패널이 떠요." data-en="Done! Open the graph view and click the <b>🎨 icon</b> in the left ribbon to open the panel.">끝! 그래프 뷰를 열고 왼쪽 리본의 <b>🎨 아이콘</b>을 누르면 패널이 떠요.</span></li>
+      </ol>
+      <p class="muted small" data-ko="수동 설치: <code>main.js · manifest.json · styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code>에 넣고 켜기." data-en="Manual: drop <code>main.js · manifest.json · styles.css</code> into <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code> and enable.">수동 설치: <code>main.js · manifest.json · styles.css</code>를 <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code>에 넣고 켜기.</p>
+    </section>
+
+    <!-- AI PROMPTS -->
+    <section id="ai" class="section">
+      <h2 data-ko="🤖 AI로 더 꾸미기" data-en="🤖 Customize with AI">🤖 AI로 더 꾸미기</h2>
+      <p class="muted" data-ko="더 깊게 만지고 싶다면, 아래 프롬프트를 ChatGPT나 Claude에 복붙하세요. 결과(색·CSS·그룹 쿼리)를 <b>Graph Styler 커스터마이즈</b>나 <b>CSS 스니펫</b>에 그대로 넣으면 돼요. <code>[ ]</code> 부분만 내 걸로 바꾸세요." data-en="Want to go further? Paste any prompt below into ChatGPT or Claude, then drop the result (palette, CSS, group queries) into <b>Graph Styler's customizer</b> or a <b>CSS snippet</b>. Just swap the <code>[ ]</code> bits for your own.">더 깊게 만지고 싶다면, 아래 프롬프트를 ChatGPT나 Claude에 복붙하세요. 결과(색·CSS·그룹 쿼리)를 <b>Graph Styler 커스터마이즈</b>나 <b>CSS 스니펫</b>에 그대로 넣으면 돼요. <code>[ ]</code> 부분만 내 걸로 바꾸세요.</p>
+
+      <div class="prompts">
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="🎨 나만의 색 팔레트" data-en="🎨 Your own palette">🎨 나만의 색 팔레트</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="옵시디언 그래프용 색 테마를 만들어줘. '[깊은 바다]' 같은 무드로, 어두운 배경 1색 + 서로 잘 구분되는 노드 색 4개를 hex 코드로 줘. 각 색이 어떤 느낌인지 한 줄씩." data-en="Design a color theme for my Obsidian graph with a '[deep ocean]' mood: one dark background color plus four clearly distinct node colors, all as hex. One line on each color's feel.">옵시디언 그래프용 색 테마를 만들어줘. '[깊은 바다]' 같은 무드로, 어두운 배경 1색 + 서로 잘 구분되는 노드 색 4개를 hex 코드로 줘. 각 색이 어떤 느낌인지 한 줄씩.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="✨ 글로우 CSS 만들기" data-en="✨ Make a glow CSS">✨ 글로우 CSS 만들기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 다크 모드(.theme-dark) 기준으로, 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로." data-en="Write one Obsidian CSS snippet that adds a neon glow to the graph view: scoped to dark mode (.theme-dark): [cyan] nodes, dark background, soft glow. Use .graph-view.color-circle, the .graph-view-content background, and a canvas filter — as a single file.">옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 다크 모드(.theme-dark) 기준으로, 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="🗂️ 내 폴더 색 그룹" data-en="🗂️ Groups for my folders">🗂️ 내 폴더 색 그룹</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="내 옵시디언 폴더가 [Projects, Daily, Ideas]야. 각 폴더에 어울리는 조화로운 색을 hex로 정하고, 그래프 Groups에 넣을 path:&quot;폴더&quot; 쿼리 + 색 형태로 정리해줘." data-en="My Obsidian folders are [Projects, Daily, Ideas]. Pick a harmonious hex color for each, then list them as graph-group entries: a path:&quot;folder&quot; query plus its color.">내 옵시디언 폴더가 [Projects, Daily, Ideas]야. 각 폴더에 어울리는 조화로운 색을 hex로 정하고, 그래프 Groups에 넣을 path:&quot;폴더&quot; 쿼리 + 색 형태로 정리해줘.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label" data-ko="🔗 그래프 모양 다듬기" data-en="🔗 Shape up the graph">🔗 그래프 모양 다듬기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
+          <p class="prompt-text" data-ko="내 옵시디언 그래프가 너무 뭉쳐 보여. forces(반발력·링크 거리·중심력)를 어떤 값으로 맞추면 시원하게 퍼질지, 그리고 노트를 어떻게 더 연결하면 그래프가 예뻐질지 알려줘." data-en="My Obsidian graph looks too clumped. What forces values (repel, link distance, center) would spread it out nicely, and how should I link my notes to make the graph prettier?">내 옵시디언 그래프가 너무 뭉쳐 보여. forces(반발력·링크 거리·중심력)를 어떤 값으로 맞추면 시원하게 퍼질지, 그리고 노트를 어떻게 더 연결하면 그래프가 예뻐질지 알려줘.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- USAGE -->
+    <section id="usage" class="section">
+      <h2 data-ko="사용법" data-en="How to use">사용법</h2>
+      <ol class="steps big-steps">
+        <li><span class="n">1</span><span data-ko="그래프 뷰를 열고, 왼쪽 리본의 <b>🎨 팔레트 아이콘</b>을 누르면 오른쪽에 패널이 떠요." data-en="Open the graph view and click the <b>🎨 palette icon</b> in the left ribbon — a panel opens on the right.">그래프 뷰를 열고, 왼쪽 리본의 <b>🎨 팔레트 아이콘</b>을 누르면 오른쪽에 패널이 떠요.</span></li>
+        <li><span class="n">2</span><span data-ko="<b>프리셋을 누르면</b> 그래프가 즉시 바뀝니다. 패널은 열어둔 채 그래프를 움직여도 돼요." data-en="<b>Tap a preset</b> — the graph restyles instantly. Keep the panel open while you move the graph.">
+
+<b>프리셋을 누르면</b> 그래프가 즉시 바뀝니다. 패널은 열어둔 채 그래프를 움직여도 돼요.</span></li>
+        <li><span class="n">3</span><span data-ko="<b>🎛️ 커스터마이즈</b>를 열어 장력·크기·색·글로우를 슬라이더로 조절하고 <b>💾 저장</b>하면 내 프리셋이 돼요." data-en="Open <b>🎛️ Customize</b>, drag the force/size/color/glow sliders, and <b>💾 Save</b> it as your own preset.">
+
+<b>🎛️ 커스터마이즈</b>를 열어 장력·크기·색·글로우를 슬라이더로 조절하고 <b>💾 저장</b>하면 내 프리셋이 돼요.</span></li>
+        <li><span class="n">4</span><span data-ko="언제든 <b>↩︎ 원래대로 되돌리기</b>로 복구할 수 있어요. 원본 설정은 자동 백업됩니다." data-en="Hit <b>↩︎ Restore</b> anytime — your original config is backed up automatically.">언제든 <b>↩︎ 원래대로 되돌리기</b>로 복구할 수 있어요. 원본 설정은 자동 백업됩니다.</span></li>
+      </ol>
+      <p class="muted" data-ko="<b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다." data-en="<b>How do colors map?</b> The preset palette is assigned to your busiest folders (or tags, if you don't use folders). It writes to Obsidian's native graph groups, so you can tweak them in settings too.">
+
+<b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="section closer">
+      <h2 data-ko="당신의 선택은?" data-en="Your move.">당신의 선택은?</h2>
+      <a class="btn primary big" href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener" data-ko="GitHub에서 설치하기 →" data-en="Install from GitHub →">GitHub에서 설치하기 →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="made">made by <a href="https://github.com/moonweave" target="_blank" rel="noopener">Moonweave</a></div>
+    <div class="flinks">
+      <a href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/phd.ai.log/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="lic">MIT · Desktop only</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
