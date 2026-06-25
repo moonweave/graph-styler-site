@@ -219,3 +219,16 @@ kbd { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border); bo
 .prompt-label { font-weight: 650; font-size: 14px; }
 .prompt-text { margin: 0; font-size: 13.5px; line-height: 1.65; color: var(--muted); }
 @media (max-width: 700px) { .prompts { grid-template-columns: 1fr; } }
+
+/* ---- tip callout ---- */
+.tip {
+  margin: 18px 0 26px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(125, 211, 252, 0.08);
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  color: #d7e8f7;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.tip b { color: #fff; }
