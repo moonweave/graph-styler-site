@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graph Styler — Your Obsidian graph, one click away</title>
+  <meta name="description" content="Make your Obsidian graph view beautiful in one click. 14 presets, custom themes, no CSS setup." />
+  <meta property="og:title" content="Graph Styler" />
+  <meta property="og:description" content="Your Obsidian graph, one click away. 14 presets and custom themes." />
+  <meta property="og:image" content="../assets/hero.png" />
+  <meta name="theme-color" content="#080b14" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2288%22>%F0%9F%8E%A8</text></svg>" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../">🎨 Graph Styler</a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#presets">Presets</a>
+      <a href="#how">How</a>
+      <a href="#install">Install</a>
+      <a href="#ai">Prompts</a>
+      <a href="#usage">Usage</a>
+    </nav>
+    <div class="lang">
+      <a class="lang-btn" href="../">KO</a>
+      <a class="lang-btn active" href="./">EN</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Your Obsidian graph,<br>one click away.</h1>
+        <p class="lead">Color, glow, and forces in one tap. No CSS, no setup.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener">Install →</a>
+          <a class="btn ghost" href="#usage">See how</a>
+        </div>
+      </div>
+      <figure class="hero-shot">
+        <img src="../assets/hero.png" alt="Graph Styler in Obsidian" loading="eager" />
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>What it is</h2>
+      <p class="big">The Obsidian graph looks great in screenshots, but getting there means fiddling with color groups, force sliders, and CSS. <b>Graph Styler does it in one click.</b> Pick a preset in the side panel and the graph restyles right away.</p>
+      <ul class="feature-grid">
+        <li><span class="fi">🎨</span><b>14 presets</b><em>From Neon to Nord & Dracula</em></li>
+        <li><span class="fi">🎛️</span><b>Make your own</b><em>Tune with sliders, then save</em></li>
+        <li><span class="fi">🌍</span><b>Any vault</b><em>Colors map to your folders (or tags)</em></li>
+        <li><span class="fi">↩︎</span><b>Safe</b><em>Original backed up, restore anytime</em></li>
+      </ul>
+    </section>
+
+    <!-- PRESETS -->
+    <section id="presets" class="section">
+      <h2>Same vault, one click apart</h2>
+      <div class="gallery">
+        <figure><img src="../assets/vaporwave.png" alt="Vaporwave preset" loading="lazy" /><figcaption>🌴 Vaporwave</figcaption></figure>
+        <figure><img src="../assets/sunset.png" alt="Sunset preset" loading="lazy" /><figcaption>🌅 Sunset</figcaption></figure>
+      </div>
+      <div class="chips">
+        <span>⚡ Neon</span><span>🌌 Galaxy</span><span>🌠 Aurora</span><span>🌅 Sunset</span>
+        <span>🌴 Vaporwave</span><span>🌊 Ocean</span><span>🌲 Forest</span><span>🍬 Candy</span>
+        <span>✨ Gold</span><span>👾 Cyberpunk</span><span>❄️ Nord</span><span>🧛 Dracula</span>
+        <span>🐈 Catppuccin</span><span>⚪ Mono</span>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="section">
+      <h2>Why a graph looks good</h2>
+      <p class="big">A pretty graph is really a few things working together. Once you know them you can do it by hand — and you'll see exactly what Graph Styler does for you in one click.</p>
+      <ul class="how-grid">
+        <li>
+          <span class="hi">🎨</span>
+          <b>Color groups</b>
+          <span>Nodes get colored by folder or tag. Click the <b>settings (gear) icon</b> inside the graph view, open <b>Groups</b>, and set a query (<code>path:&quot;folder&quot;</code> or <code>tag:#tag</code>) with a color.</span>
+        </li>
+        <li>
+          <span class="hi">🧲</span>
+          <b>Forces</b>
+          <span>How nodes gather or spread. Use the <b>Forces</b> sliders (repel, link distance, center) in that same graph-view panel. More repel + longer links = a wide, spread-out galaxy.</span>
+        </li>
+        <li>
+          <span class="hi">✨</span>
+          <b>Glow &amp; background</b>
+          <span>The glowing neon look comes from a <b>CSS snippet</b>. Drop a file into <b>Settings → Appearance → CSS snippets</b> and toggle it on. (Ready-to-use code is right below.)</span>
+        </li>
+        <li>
+          <span class="hi">🔗</span>
+          <b>Shape = links</b>
+          <span>The <b>shape</b> comes from <b>how you link your notes</b>. The more <code>[[wikilinks]]</code> you add, the denser and more constellation-like it gets. A pretty graph is the shape of a well-connected vault.</span>
+        </li>
+      </ul>
+      <p class="muted">Doing all this by hand every time is tedious — so <b>Graph Styler applies color, forces, and glow in one preset</b>, and maps the colors to your folders (or tags) automatically.</p>
+
+      <h3>Try it yourself — glow CSS</h3>
+      <p class="muted small">Want just the glow without the plugin? Save the code below as <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. Built for dark mode. (Graph Styler does this for you.)</p>
+      <div class="snippet">
+        <pre><code>/* graph glow — .obsidian/snippets/graph-glow.css */
+.theme-dark .graph-view.color-circle { color: #7dd3fc; }
+.theme-dark .graph-view.color-line   { color: #2b4a63; }
+.theme-dark .graph-view.color-fill-tag { color: #f472b6; }
+.graph-view-content {
+  background: radial-gradient(circle at 50% 45%, #16304a, #0b1624 70%) !important;
+}
+.graph-view-content canvas { filter: saturate(1.35) brightness(1.12); }</code></pre>
+        <button class="copy snippet-copy">Copy</button>
+      </div>
+    </section>
+
+    <!-- INSTALL -->
+    <section id="install" class="section">
+      <h2>Install (beginner-friendly)</h2>
+      <div class="tip">💡 Works best in <b>dark mode</b>. Turn it on in <b>Settings → Appearance → Base color scheme: Dark</b> — the glow and colors are built for dark themes.</div>
+      <p class="muted">You'll need the Obsidian <b>desktop app</b>. It's in beta, so you install it through <b>BRAT</b> (a tool that installs beta plugins straight from GitHub) — community store submission coming.</p>
+      <ol class="steps big-steps">
+        <li><span class="n">1</span><span>Go to <b>Settings → Community plugins</b>, turn off Restricted mode, and enable community plugins.</span></li>
+        <li><span class="n">2</span><span>Click <b>Browse</b>, search <b>BRAT</b>, install it, and enable it.</span></li>
+        <li><span class="n">3</span><span>Run <b>BRAT: Add a beta plugin</b> from the command palette (<kbd>Cmd/Ctrl + P</kbd>) — or use the <b>Add Beta Plugin</b> field in BRAT's settings — and paste this:</span></li>
+      </ol>
+      <div class="code"><code>moonweave/obsidian-graph-styler</code><button class="copy" data-copy="moonweave/obsidian-graph-styler">Copy</button></div>
+      <ol class="steps big-steps" start="4">
+        <li><span class="n">4</span><span>In <b>Settings → Community plugins → Installed plugins</b>, toggle <b>Graph Styler</b> on.</span></li>
+        <li><span class="n">5</span><span>Done! Open the graph view and click the <b>🎨 icon</b> in the left ribbon to open the panel.</span></li>
+      </ol>
+      <p class="muted small">Manual: drop <code>main.js · manifest.json · styles.css</code> into <code>&lt;vault&gt;/.obsidian/plugins/graph-styler/</code> and enable.</p>
+    </section>
+
+    <!-- AI PROMPTS -->
+    <section id="ai" class="section">
+      <h2>🤖 Customize with AI</h2>
+      <p class="muted">Want to go further? Paste any prompt below into ChatGPT or Claude, then drop the result (palette, CSS, group queries) into <b>Graph Styler's customizer</b> or a <b>CSS snippet</b>. Just swap the <code>[ ]</code> bits for your own.</p>
+
+      <div class="prompts">
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label">🎨 Your own palette</span><button class="copy prompt-copy">Copy</button></div>
+          <p class="prompt-text">Design a color theme for my Obsidian graph with a '[deep ocean]' mood: one dark background color plus four clearly distinct node colors, all as hex. One line on each color's feel.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label">✨ Make a glow CSS</span><button class="copy prompt-copy">Copy</button></div>
+          <p class="prompt-text">Write one Obsidian CSS snippet that adds a neon glow to the graph view: scoped to dark mode (.theme-dark): [cyan] nodes, dark background, soft glow. Use .graph-view.color-circle, the .graph-view-content background, and a canvas filter — as a single file.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label">🗂️ Groups for my folders</span><button class="copy prompt-copy">Copy</button></div>
+          <p class="prompt-text">My Obsidian folders are [Projects, Daily, Ideas]. Pick a harmonious hex color for each, then list them as graph-group entries: a path:&quot;folder&quot; query plus its color.</p>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="prompt-label">🔗 Shape up the graph</span><button class="copy prompt-copy">Copy</button></div>
+          <p class="prompt-text">My Obsidian graph looks too clumped. What forces values (repel, link distance, center) would spread it out nicely, and how should I link my notes to make the graph prettier?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- USAGE -->
+    <section id="usage" class="section">
+      <h2>How to use</h2>
+      <ol class="steps big-steps">
+        <li><span class="n">1</span><span>Open the graph view and click the <b>🎨 palette icon</b> in the left ribbon — a panel opens on the right.</span></li>
+        <li><span class="n">2</span><span><b>Tap a preset</b> — the graph restyles instantly. Keep the panel open while you move the graph.</span></li>
+        <li><span class="n">3</span><span>Open <b>🎛️ Customize</b>, drag the force/size/color/glow sliders, and <b>💾 Save</b> it as your own preset.</span></li>
+        <li><span class="n">4</span><span>Hit <b>↩︎ Restore</b> anytime — your original config is backed up automatically.</span></li>
+      </ol>
+      <p class="muted"><b>How do colors map?</b> The preset palette is assigned to your busiest folders (or tags, if you don't use folders). It writes to Obsidian's native graph groups, so you can tweak them in settings too.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="section closer">
+      <h2>Your move.</h2>
+      <a class="btn primary big" href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener">Install from GitHub →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="made">made by <a href="https://github.com/moonweave" target="_blank" rel="noopener">Moonweave</a></div>
+    <div class="flinks">
+      <a href="https://github.com/moonweave/obsidian-graph-styler" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/phd.ai.log/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="lic">MIT · Desktop only</div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

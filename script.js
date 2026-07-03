@@ -1,8 +1,19 @@
 (function () {
   var STORE = "gs-site-lang";
+  var TITLES = {
+    ko: "Graph Styler — 옵시디언 그래프, 클릭 한 번으로",
+    en: "Graph Styler — Your Obsidian graph, one click away"
+  };
+  var DESCRIPTIONS = {
+    ko: "옵시디언 그래프 뷰를 클릭 한 번으로 예쁘게. 14가지 프리셋 + 나만의 테마. CSS도, 설정도 필요 없어요.",
+    en: "Make your Obsidian graph view beautiful in one click. 14 presets, custom themes, no CSS setup."
+  };
 
   function setLang(lang) {
     document.documentElement.lang = lang;
+    document.title = TITLES[lang] || TITLES.ko;
+    var desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", DESCRIPTIONS[lang] || DESCRIPTIONS.ko);
     document.querySelectorAll("[data-" + lang + "]").forEach(function (el) {
       var val = el.getAttribute("data-" + lang);
       if (val !== null) el.innerHTML = val;
@@ -38,7 +49,15 @@
     });
   });
 
-  var saved = "ko";
+  var urlLang = "";
+  try {
+    var params = new URLSearchParams(window.location.search);
+    urlLang = params.get("lang") || "";
+  } catch (e) {}
+
+  var pathLang = window.location.pathname.indexOf("/en") === 0 ? "en" : "";
+  var saved = pathLang || urlLang || "ko";
   try { saved = localStorage.getItem(STORE) || "ko"; } catch (e) {}
+  if (pathLang || urlLang) saved = pathLang || urlLang;
   if (saved === "en") setLang("en");
 })();
