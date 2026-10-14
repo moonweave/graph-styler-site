@@ -4,10 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Graph Styler — 옵시디언 그래프, 클릭 한 번으로</title>
-  <meta name="description" content="옵시디언 그래프 뷰를 클릭 한 번으로 예쁘게. 14가지 프리셋 + 나만의 테마. CSS도, 설정도 필요 없어요." />
+  <meta name="description" content="Graph Styler 0.4.1 사용 가이드. 테마 적용, 내 색상 그룹 유지, 실험적 3D, 프리셋 공유와 PNG 저장까지." />
   <meta property="og:title" content="Graph Styler" />
   <meta property="og:description" content="옵시디언 그래프, 클릭 한 번으로 예쁘게. One click, 14 themes." />
-  <meta property="og:image" content="assets/hero.png" />
+  <meta property="og:image" content="https://graph-styler.pages.dev/assets/hero.png" />
+  <meta property="og:url" content="https://graph-styler.pages.dev/" />
+  <link rel="canonical" href="https://graph-styler.pages.dev/" />
+  <link rel="alternate" hreflang="ko" href="https://graph-styler.pages.dev/" />
+  <link rel="alternate" hreflang="en" href="https://graph-styler.pages.dev/en/" />
   <meta name="theme-color" content="#080b14" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2288%22>%F0%9F%8E%A8</text></svg>" />
   <link rel="stylesheet" href="style.css" />
@@ -18,9 +22,9 @@
     <nav class="links">
       <a href="#about" data-ko="소개" data-en="About">소개</a>
       <a href="#presets" data-ko="프리셋" data-en="Presets">프리셋</a>
-      <a href="#how" data-ko="원리" data-en="How">원리</a>
+      <a href="#keep-groups" data-ko="그룹 보존" data-en="Groups">그룹 보존</a>
       <a href="#install" data-ko="설치" data-en="Install">설치</a>
-      <a href="#ai" data-ko="프롬프트" data-en="Prompts">프롬프트</a>
+      <a href="#graph3d" data-ko="3D" data-en="3D">3D</a>
       <a href="#usage" data-ko="사용법" data-en="Usage">사용법</a>
     </nav>
     <div class="lang">
@@ -34,7 +38,8 @@
     <section class="hero">
       <div class="hero-text">
         <h1 data-ko="옵시디언 그래프,<br>클릭 한 번으로." data-en="Your Obsidian graph,<br>one click away.">옵시디언 그래프,<br>클릭 한 번으로.</h1>
-        <p class="lead" data-ko="색 · 글로우 · 장력을 한 번에. CSS도, 설정도 필요 없어요." data-en="Color, glow, and forces in one tap. No CSS, no setup.">색 · 글로우 · 장력을 한 번에. CSS도, 설정도 필요 없어요.</p>
+        <p class="lead" data-ko="색과 글로우는 바꾸고, 지금 배치는 그대로. CSS를 직접 쓰지 않아도 돼요." data-en="Change colors and glow, keep your current physics. No hand-written CSS needed.">색과 글로우는 바꾸고, 지금 배치는 그대로. CSS를 직접 쓰지 않아도 돼요.</p>
+        <p class="muted small" data-ko="0.4.1 기준 · 2026년 10월 14일 업데이트 · @phd.ai.log" data-en="Updated for 0.4.1 · October 14, 2026 · @phd.ai.log">0.4.1 기준 · 2026년 10월 14일 업데이트 · @phd.ai.log</p>
         <div class="cta">
           <a class="btn primary" href="https://obsidian.md/plugins?id=graph-styler" target="_blank" rel="noopener" data-ko="Obsidian에서 설치하기 →" data-en="Install from Obsidian →">Obsidian에서 설치하기 →</a>
           <a class="btn ghost" href="#usage" data-ko="사용법 보기" data-en="See how">사용법 보기</a>
@@ -48,7 +53,7 @@
     <!-- ABOUT -->
     <section id="about" class="section">
       <h2 data-ko="이게 뭐냐면" data-en="What it is">이게 뭐냐면</h2>
-      <p class="big" data-ko="옵시디언 그래프(노트 연결을 점과 선으로 보여주는 화면)는 스크린샷이 참 예쁘죠. 근데 그렇게 만들려면 색 그룹, 장력 슬라이더, CSS 스니펫을 다 뒤져야 합니다. <b>Graph Styler는 그걸 클릭 한 번으로.</b> 사이드 패널에서 무드 하나를 누르면 그래프가 바로 바뀝니다." data-en="The Obsidian graph view (the screen that shows your notes as connected dots) looks great in screenshots, but getting there means fiddling with color groups, force sliders, and CSS. <b>Graph Styler does it in one click.</b> Pick a preset in the side panel and the graph restyles right away.">옵시디언 그래프(노트 연결을 점과 선으로 보여주는 화면)는 스크린샷이 참 예쁘죠. 근데 그렇게 만들려면 색 그룹, 장력 슬라이더, CSS 스니펫을 다 뒤져야 합니다. <b>Graph Styler는 그걸 클릭 한 번으로.</b> 사이드 패널에서 무드 하나를 누르면 그래프가 바로 바뀝니다.</p>
+      <p class="big" data-ko="옵시디언 그래프는 노트 사이의 링크를 점과 선으로 보여주는 화면이에요. Graph Styler는 이 그래프의 <b>색·배경·글로우를 테마 하나로</b> 바꿔요. 기본 테마는 현재 물리·크기 설정을 건드리지 않습니다. 노트를 분석하거나 새 연결을 만들어 주는 도구는 아니에요." data-en="Obsidian's graph shows notes and their links as dots and lines. Graph Styler changes its <b>colors, background and glow with one preset</b>. Built-in presets leave your physics and sizes alone. It does not analyze your notes or create new links.">옵시디언 그래프는 노트 사이의 링크를 점과 선으로 보여주는 화면이에요. Graph Styler는 이 그래프의 <b>색·배경·글로우를 테마 하나로</b> 바꿔요. 기본 테마는 현재 물리·크기 설정을 건드리지 않습니다. 노트를 분석하거나 새 연결을 만들어 주는 도구는 아니에요.</p>
       <ul class="feature-grid">
         <li><span class="fi">🎨</span><b data-ko="14가지 프리셋" data-en="14 presets">14가지 프리셋</b><em data-ko="네온부터 Nord·Dracula까지" data-en="From Neon to Nord & Dracula">네온부터 Nord·Dracula까지</em></li>
         <li><span class="fi">🎛️</span><b data-ko="나만의 테마" data-en="Make your own">나만의 테마</b><em data-ko="슬라이더로 조절해 저장" data-en="Tune with sliders, then save">슬라이더로 조절해 저장</em></li>
@@ -95,10 +100,10 @@
         <li>
           <span class="hi">🔗</span>
           <b data-ko="모양 = 링크" data-en="Shape = links">모양 = 링크</b>
-          <span data-ko="그래프 <b>모양</b>은 노트를 <b>어떻게 연결(링크)했는지</b>가 만들어요. <code>[[노트]]</code>로 링크를 많이 걸수록 촘촘하게 이어진 별·은하 모양이 돼요. 예쁜 그래프는 잘 정리한 결과인 셈." data-en="The <b>shape</b> comes from <b>how you link your notes</b>. The more <code>[[wikilinks]]</code> you add, the denser and more constellation-like it gets. A pretty graph is the shape of a well-connected vault.">그래프 <b>모양</b>은 노트를 <b>어떻게 연결(링크)했는지</b>가 만들어요. <code>[[노트]]</code>로 링크를 많이 걸수록 촘촘하게 이어진 별·은하 모양이 돼요. 예쁜 그래프는 잘 정리한 결과인 셈.</span>
+          <span data-ko="그래프 모양은 노트 사이의 <code>[[링크]]</code>와 배치 설정에 따라 달라져요. 실제로 관련 있는 노트를 연결하세요. 촘촘하거나 예쁜 모양이 지식의 품질을 뜻하지는 않습니다." data-en="Graph shape depends on <code>[[links]]</code> and layout settings. Link notes that are genuinely related. A dense or attractive graph does not prove the quality of the knowledge.">그래프 모양은 노트 사이의 <code>[[링크]]</code>와 배치 설정에 따라 달라져요. 실제로 관련 있는 노트를 연결하세요. 촘촘하거나 예쁜 모양이 지식의 품질을 뜻하지는 않습니다.</span>
         </li>
       </ul>
-      <p class="muted" data-ko="이걸 매번 손으로 맞추기 번거로우니까, <b>Graph Styler가 프리셋 하나로 색·장력·글로우를 한 번에</b> 적용해줘요. 색 그룹도 내 폴더(또는 태그)에 자동으로 맞춰지고요." data-en="Doing all this by hand every time is tedious — so <b>Graph Styler applies color, forces, and glow in one preset</b>, and maps the colors to your folders (or tags) automatically.">이걸 매번 손으로 맞추기 번거로우니까, <b>Graph Styler가 프리셋 하나로 색·장력·글로우를 한 번에</b> 적용해줘요. 색 그룹도 내 폴더(또는 태그)에 자동으로 맞춰지고요.</p>
+      <p class="muted" data-ko="기본 테마는 색·배경·글로우만 바꿔요. 물리를 바꾸고 싶을 때는 그래프 설정이나 커스터마이즈에서 직접 조절하세요. <b>커스텀 프리셋에는 물리 설정도 저장</b>되므로 적용할 때 달라질 수 있어요." data-en="Built-in presets change colors, background and glow only. Adjust physics in the graph settings or Customize when you want to. <b>Custom presets also save physics settings</b>, so applying one can change them.">기본 테마는 색·배경·글로우만 바꿔요. 물리를 바꾸고 싶을 때는 그래프 설정이나 커스터마이즈에서 직접 조절하세요. <b>커스텀 프리셋에는 물리 설정도 저장</b>되므로 적용할 때 달라질 수 있어요.</p>
 
       <h3 data-ko="직접 해보기 — 글로우 CSS" data-en="Try it yourself — glow CSS">직접 해보기 — 글로우 CSS</h3>
       <p class="muted small" data-ko="플러그인(Obsidian에 기능을 더하는 확장) 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)" data-en="Want just the glow without the plugin (an add-on that extends Obsidian)? Save the code below as <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. Built for dark mode. (Graph Styler does this for you.)">플러그인(Obsidian에 기능을 더하는 확장) 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)</p>
@@ -107,10 +112,19 @@
 .theme-dark .graph-view.color-circle { color: #7dd3fc; }
 .theme-dark .graph-view.color-line   { color: #2b4a63; }
 .theme-dark .graph-view.color-fill-tag { color: #f472b6; }
-.graph-view-content {
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="localgraph"] .view-content {
   background: radial-gradient(circle at 50% 45%, #16304a, #0b1624 70%) !important;
 }
-.graph-view-content canvas { filter: saturate(1.35) brightness(1.12); }</code></pre>
+.workspace-leaf-content[data-type="graph"] .view-content > iframe,
+.workspace-leaf-content[data-type="localgraph"] .view-content > iframe {
+  filter: saturate(1.35) brightness(1.12);
+}
+/* Keep the input overlay above the filtered renderer. */
+.workspace-leaf-content[data-type="graph"] .view-content > canvas ~ iframe,
+.workspace-leaf-content[data-type="localgraph"] .view-content > canvas ~ iframe {
+  pointer-events: none;
+}</code></pre>
         <button class="copy snippet-copy" data-ko="복사" data-en="Copy">복사</button>
       </div>
     </section>
@@ -118,7 +132,7 @@
     <!-- INSTALL -->
     <section id="install" class="section">
       <h2 data-ko="설치 (처음이어도 OK)" data-en="Install (beginner-friendly)">설치 (처음이어도 OK)</h2>
-      <div class="tip" data-ko="💡 <b>다크 모드</b>에서 가장 예뻐요. <b>설정 → 화면 → 기본 색상: 어둡게</b>로 켜두세요 — 글로우·색은 다크 테마용이라 라이트 모드에선 밋밋해요." data-en="💡 Works best in <b>dark mode</b>. Turn it on in <b>Settings → Appearance → Base color scheme: Dark</b> — the glow and colors are built for dark themes.">💡 <b>다크 모드</b>에서 가장 예뻐요. <b>설정 → 화면 → 기본 색상: 어둡게</b>로 켜두세요 — 글로우·색은 다크 테마용이라 라이트 모드에선 밋밋해요.</div>
+      <div class="tip" data-ko="밝은 앱 테마에서도 쓸 수 있어요. 프리셋은 그래프 영역에 자체 배경을 적용하므로, 앱 전체를 다크 모드로 바꿀 필요는 없습니다." data-en="Light and dark app themes both work. Presets apply their own graph background, so you do not need to switch the whole app to dark mode.">밝은 앱 테마에서도 쓸 수 있어요. 프리셋은 그래프 영역에 자체 배경을 적용하므로, 앱 전체를 다크 모드로 바꿀 필요는 없습니다.</div>
       <p class="muted" data-ko="옵시디언 <b>데스크탑 앱</b>이 필요해요. 이제 Graph Styler는 <b>Obsidian 커뮤니티 플러그인(사용자가 만든 확장)</b>에 정식 등록되어 BRAT 없이 바로 설치할 수 있습니다." data-en="You'll need the Obsidian <b>desktop app</b>. Graph Styler is now officially listed in <b>Obsidian Community plugins</b> (user-made add-ons), so you can install it directly without BRAT.">옵시디언 <b>데스크탑 앱</b>이 필요해요. 이제 Graph Styler는 <b>Obsidian 커뮤니티 플러그인(사용자가 만든 확장)</b>에 정식 등록되어 BRAT 없이 바로 설치할 수 있습니다.</p>
       <ol class="steps big-steps">
         <li><span class="n">1</span><span data-ko="<b>설정 → 커뮤니티 플러그인</b>으로 가서 '제한 모드'를 끄고 커뮤니티 플러그인을 켜요." data-en="Go to <b>Settings → Community plugins</b>, turn off Restricted mode, and enable community plugins."><b>설정 → 커뮤니티 플러그인</b>으로 가서 '제한 모드'를 끄고 커뮤니티 플러그인을 켜요.</span></li>
@@ -135,7 +149,7 @@
     <!-- AI PROMPTS -->
     <section id="ai" class="section">
       <h2 data-ko="🤖 AI로 더 꾸미기" data-en="🤖 Customize with AI">🤖 AI로 더 꾸미기</h2>
-      <p class="muted" data-ko="더 깊게 만지고 싶다면, 아래 프롬프트를 ChatGPT나 Claude에 복붙하세요. 결과(색·CSS·그룹 쿼리)를 <b>Graph Styler 커스터마이즈</b>나 <b>CSS 스니펫</b>에 그대로 넣으면 돼요. <code>[ ]</code> 부분만 내 걸로 바꾸세요." data-en="Want to go further? Paste any prompt below into ChatGPT or Claude, then drop the result (palette, CSS, group queries) into <b>Graph Styler's customizer</b> or a <b>CSS snippet</b>. Just swap the <code>[ ]</code> bits for your own.">더 깊게 만지고 싶다면, 아래 프롬프트를 ChatGPT나 Claude에 복붙하세요. 결과(색·CSS·그룹 쿼리)를 <b>Graph Styler 커스터마이즈</b>나 <b>CSS 스니펫</b>에 그대로 넣으면 돼요. <code>[ ]</code> 부분만 내 걸로 바꾸세요.</p>
+      <p class="muted" data-ko="색을 직접 고르기 어렵다면 아래 프롬프트를 써보세요. 색상 코드는 <b>Graph Styler 커스터마이즈</b>에, 그룹 검색 조건은 <b>그래프 설정 → Groups</b>에 직접 입력해요. CSS는 별도 스니펫 파일에 저장합니다. AI가 만든 코드는 버전 호환성과 내용을 확인한 뒤 사용하세요." data-en="Try these prompts if you want help choosing colors. Enter hex colors in <b>Graph Styler Customize</b>, group queries in <b>graph settings → Groups</b>, and save CSS in a separate snippet file. Review AI-generated code and version compatibility before using it.">색을 직접 고르기 어렵다면 아래 프롬프트를 써보세요. 색상 코드는 <b>Graph Styler 커스터마이즈</b>에, 그룹 검색 조건은 <b>그래프 설정 → Groups</b>에 직접 입력해요. CSS는 별도 스니펫 파일에 저장합니다. AI가 만든 코드는 버전 호환성과 내용을 확인한 뒤 사용하세요.</p>
 
       <div class="prompts">
         <div class="prompt">
@@ -145,7 +159,7 @@
 
         <div class="prompt">
           <div class="prompt-head"><span class="prompt-label" data-ko="✨ 글로우 CSS 만들기" data-en="✨ Make a glow CSS">✨ 글로우 CSS 만들기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
-          <p class="prompt-text" data-ko="옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 다크 모드(.theme-dark) 기준으로, 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로." data-en="Write one Obsidian CSS snippet that adds a neon glow to the graph view: scoped to dark mode (.theme-dark): [cyan] nodes, dark background, soft glow. Use .graph-view.color-circle, the .graph-view-content background, and a canvas filter — as a single file.">옵시디언 그래프 뷰에 네온 글로우를 주는 CSS 스니펫을 하나 만들어줘. 다크 모드(.theme-dark) 기준으로, 노드는 [시안]색, 배경은 어둡게, 은은하게 빛나게. .graph-view.color-circle, .graph-view-content 배경, canvas filter를 써서 파일 하나로.</p>
+          <p class="prompt-text" data-ko="위 가이드의 글로우 CSS를 기준으로 [시안색] 분위기로 색만 바꿔줘. 그래프·로컬 그래프에만 적용하고, iframe 입력 통과 규칙은 유지해줘. 사용하는 Obsidian 버전에서 선택자가 맞는지도 확인할 항목을 알려줘." data-en="Adapt the glow CSS above to a [cyan] palette. Keep it scoped to global and local graphs and preserve the iframe input pass-through rule. List what to check for selector compatibility in my Obsidian version.">위 가이드의 글로우 CSS를 기준으로 [시안색] 분위기로 색만 바꿔줘. 그래프·로컬 그래프에만 적용하고, iframe 입력 통과 규칙은 유지해줘. 사용하는 Obsidian 버전에서 선택자가 맞는지도 확인할 항목을 알려줘.</p>
         </div>
 
         <div class="prompt">
@@ -155,7 +169,7 @@
 
         <div class="prompt">
           <div class="prompt-head"><span class="prompt-label" data-ko="🔗 그래프 모양 다듬기" data-en="🔗 Shape up the graph">🔗 그래프 모양 다듬기</span><button class="copy prompt-copy" data-ko="복사" data-en="Copy">복사</button></div>
-          <p class="prompt-text" data-ko="내 옵시디언 그래프가 너무 뭉쳐 보여. forces(반발력·링크 거리·중심력)를 어떤 값으로 맞추면 시원하게 퍼질지, 그리고 노트를 어떻게 더 연결하면 그래프가 예뻐질지 알려줘." data-en="My Obsidian graph looks too clumped. What forces values (repel, link distance, center) would spread it out nicely, and how should I link my notes to make the graph prettier?">내 옵시디언 그래프가 너무 뭉쳐 보여. forces(반발력·링크 거리·중심력)를 어떤 값으로 맞추면 시원하게 퍼질지, 그리고 노트를 어떻게 더 연결하면 그래프가 예뻐질지 알려줘.</p>
+          <p class="prompt-text" data-ko="내 옵시디언 그래프가 너무 뭉쳐 보여. 반발력·링크 거리·중심력을 각각 바꾸면 어떤 차이가 나는지 알려줘. 기존 값을 기록하고 하나씩 비교할 순서를 정해줘. 모양을 위해 노트 링크를 바꾸지는 않을 거야." data-en="My Obsidian graph looks too clumped. Explain what changing repel force, link distance and center force does. Give me an order for comparing one setting at a time after recording the original values. I will not change note links just for appearance.">내 옵시디언 그래프가 너무 뭉쳐 보여. 반발력·링크 거리·중심력을 각각 바꾸면 어떤 차이가 나는지 알려줘. 기존 값을 기록하고 하나씩 비교할 순서를 정해줘. 모양을 위해 노트 링크를 바꾸지는 않을 거야.</p>
         </div>
       </div>
     </section>
@@ -171,12 +185,59 @@
         <li><span class="n">3</span><span data-ko="<b>🎛️ 커스터마이즈</b>를 열어 장력·크기·색·글로우를 슬라이더로 조절하고 <b>💾 저장</b>하면 내 프리셋이 돼요." data-en="Open <b>🎛️ Customize</b>, drag the force/size/color/glow sliders, and <b>💾 Save</b> it as your own preset.">
 
 <b>🎛️ 커스터마이즈</b>를 열어 장력·크기·색·글로우를 슬라이더로 조절하고 <b>💾 저장</b>하면 내 프리셋이 돼요.</span></li>
-        <li><span class="n">4</span><span data-ko="언제든 <b>↩︎ 원래대로 되돌리기</b>로 복구할 수 있어요. 원본 설정은 자동 백업됩니다." data-en="Hit <b>↩︎ Restore</b> anytime — your original config is backed up automatically.">언제든 <b>↩︎ 원래대로 되돌리기</b>로 복구할 수 있어요. 원본 설정은 자동 백업됩니다.</span></li>
+        <li><span class="n">4</span><span data-ko="<b>↩︎ 원래대로 되돌리기</b>는 첫 적용 전의 그래프 설정으로 돌아갑니다. 직전 작업 취소가 아니며, 이후 바꾼 그룹·물리 설정도 덮어쓰니 확인 문구를 읽고 실행하세요." data-en="<b>↩︎ Restore original</b> returns to the graph settings saved before the first application, not the previous step. It overwrites later group and physics edits too; read the confirmation before restoring."><b>↩︎ 원래대로 되돌리기</b>는 첫 적용 전의 그래프 설정으로 돌아갑니다. 직전 작업 취소가 아니며, 이후 바꾼 그룹·물리 설정도 덮어쓰니 확인 문구를 읽고 실행하세요.</span></li>
       </ol>
       <p class="muted" data-ko="<b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다." data-en="<b>How do colors map?</b> The preset palette is assigned to your busiest folders (or tags, if you don't use folders). It writes to Obsidian's native graph groups, so you can tweak them in settings too.">
 
 <b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다.</p>
     </section>
+
+    <article aria-label="Graph Styler guide">
+    <section id="keep-groups" class="section">
+      <h2 data-ko="내 분류 색을 지키려면" data-en="Keep the colors you use to classify notes">내 분류 색을 지키려면</h2>
+      <p class="big" data-ko="이미 그룹별로 색을 정해 두었다면, 테마를 누르기 전에 <b>내 색상 그룹 유지</b>를 켜세요. 0.4.1에서 추가된 옵션이에요." data-en="If you already use group colors, turn on <b>Keep my color groups</b> before applying a preset. New in 0.4.1.">이미 그룹별로 색을 정해 두었다면, 테마를 누르기 전에 <b>내 색상 그룹 유지</b>를 켜세요. 0.4.1에서 추가된 옵션이에요.</p>
+      <ul class="muted">
+        <li data-ko="그룹의 검색 조건·순서·색을 유지해요. Mono와 실시간 미리보기에서도 동일합니다. 글로우에 따라 보이는 밝기는 달라질 수 있어요." data-en="Rules, order and colors stay intact, including with Mono and live preview. Glow can still change apparent brightness.">그룹의 검색 조건·순서·색을 유지해요. Mono와 실시간 미리보기에서도 동일합니다. 글로우에 따라 보이는 밝기는 달라질 수 있어요.</li>
+        <li data-ko="기본값은 꺼짐. 켜면 그룹 색 선택이 비활성화되고 로컬 그래프의 별도 그룹도 건드리지 않아요. 설정은 이 볼트에만 기억하며 공유 코드에는 넣지 않습니다." data-en="Off by default. When on, group color pickers are disabled and local graphs keep their own groups. The setting stays in this vault and is not shared in a preset code.">기본값은 꺼짐. 켜면 그룹 색 선택이 비활성화되고 로컬 그래프의 별도 그룹도 건드리지 않아요. 설정은 이 볼트에만 기억하며 공유 코드에는 넣지 않습니다.</li>
+        <li data-ko="앞서 덮어쓴 그룹을 복구하지는 않아요. 끈 상태에서는 테마가 자동 그룹을 적용하고 Mono는 그룹을 비웁니다." data-en="It does not recover previously replaced groups. With it off, presets apply automatic groups and Mono clears groups.">앞서 덮어쓴 그룹을 복구하지는 않아요. 끈 상태에서는 테마가 자동 그룹을 적용하고 Mono는 그룹을 비웁니다.</li>
+      </ul>
+    </section>
+
+    <section id="graph3d" class="section">
+      <h2 data-ko="3D는 이렇게 열어요" data-en="Open the 3D graph">3D는 이렇게 열어요</h2>
+      <p class="big" data-ko="패널의 <b>🧊 3D (실험 기능)</b>을 펼쳐 3D를 켜고 <b>3D 그래프 열기</b>를 누르세요. 기본값은 꺼짐이며, 실험 기능이라 이후 바뀔 수 있어요." data-en="Expand <b>🧊 3D (experimental)</b>, enable the view and select <b>Open 3D graph</b>. Off by default; experimental behavior may change.">패널의 <b>🧊 3D (실험 기능)</b>을 펼쳐 3D를 켜고 <b>3D 그래프 열기</b>를 누르세요. 기본값은 꺼짐이며, 실험 기능이라 이후 바뀔 수 있어요.</p>
+      <p class="muted" data-ko="<b>배치</b>와 <b>화면 분위기</b>는 별개예요. 배치는 Force·Orbital·Globe 세 가지, 분위기는 기본·Deep Space 두 가지입니다." data-en="<b>Layout</b> and <b>Look</b> are separate: three layouts (Force, Orbital, Globe) and two looks (Original, Deep Space)."><b>배치</b>와 <b>화면 분위기</b>는 별개예요. 배치는 Force·Orbital·Globe 세 가지, 분위기는 기본·Deep Space 두 가지입니다.</p>
+      <div class="table-scroll" role="region" tabindex="0" aria-label="3D layouts">
+        <table>
+          <caption data-ko="3D 배치별 표현 — 좁은 화면에서는 좌우로 넘겨 보세요" data-en="3D layouts — swipe or scroll sideways on narrow screens">3D 배치별 표현 — 좁은 화면에서는 좌우로 넘겨 보세요</caption>
+          <thead><tr><th scope="col" data-ko="배치" data-en="Layout">배치</th><th scope="col" data-ko="보여주는 것" data-en="What it shows">보여주는 것</th><th scope="col" data-ko="주의할 점" data-en="Keep in mind">주의할 점</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Force</th><td data-ko="연결과 반발력에 따라 공간에 퍼진 그래프" data-en="Notes spread by link and repulsion forces">연결과 반발력에 따라 공간에 퍼진 그래프</td><td data-ko="기본 배치. 2D와 거리·겹침 방지 방식이 같지는 않아요." data-en="Default layout. Distances and collision behavior differ from 2D.">기본 배치. 2D와 거리·겹침 방지 방식이 같지는 않아요.</td></tr>
+            <tr><th scope="row">Orbital</th><td data-ko="선택한 중심에서 링크로 몇 단계 떨어졌는지에 따른 구면 배치" data-en="Shells based on shortest link distance from a selected center">선택한 중심에서 링크로 몇 단계 떨어졌는지에 따른 구면 배치</td><td data-ko="중심은 검색해서 지정. 자동은 보이는 노트 중 연결이 가장 많은 노트예요." data-en="Search for a center; automatic uses the most-connected visible note.">중심은 검색해서 지정. 자동은 보이는 노트 중 연결이 가장 많은 노트예요.</td></tr>
+            <tr><th scope="row">Globe</th><td data-ko="색 그룹을 구면의 영역에 놓고 곡선으로 연결" data-en="Color groups placed in regions on a sphere, linked by curved arcs">색 그룹을 구면의 영역에 놓고 곡선으로 연결</td><td data-ko="노트의 지리적 위치나 의미적 거리를 뜻하지는 않아요." data-en="Positions do not represent geography or semantic distance.">노트의 지리적 위치나 의미적 거리를 뜻하지는 않아요.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" data-ko="드래그로 회전, 스크롤·핀치로 확대, Shift+드래그나 오른쪽 드래그로 이동. 노드에 마우스를 올리면 이름과 연결이 강조되고, 클릭하면 노트가 열려요. 자동 회전은 끌 수 있습니다." data-en="Drag to rotate, scroll or pinch to zoom, Shift-drag or right-drag to pan. Hover for a name and highlighted links; click to open the note. Auto-rotate can be turned off.">드래그로 회전, 스크롤·핀치로 확대, Shift+드래그나 오른쪽 드래그로 이동. 노드에 마우스를 올리면 이름과 연결이 강조되고, 클릭하면 노트가 열려요. 자동 회전은 끌 수 있습니다.</p>
+      <p class="tip" data-ko="<b>필터를 바꿨다면 3D 탭을 다시 열어주세요.</b> 열린 전체 그래프의 보이는 노드·링크를 가져오는 방식이며 실시간 필터 갱신은 아직 안 돼요. 전체 그래프가 없으면 Markdown 노트 전체를 사용하고, 로컬 그래프는 가져오지 않습니다. 색 그룹은 <code>path:</code>·<code>tag:</code> 조건을 지원하며, 모든 검색 조건이나 화살표·텍스트 페이드 설정이 그대로 따라오지는 않아요." data-en="<b>Reopen the 3D tab after changing filters.</b> It snapshots visible nodes and links from the open global graph; filters do not update live. Without a global graph it uses all Markdown notes, not the local graph. Color groups support <code>path:</code> and <code>tag:</code>; arbitrary queries, arrows and text-fade settings do not all carry over."><b>필터를 바꿨다면 3D 탭을 다시 열어주세요.</b> 열린 전체 그래프의 보이는 노드·링크를 가져오는 방식이며 실시간 필터 갱신은 아직 안 돼요. 전체 그래프가 없으면 Markdown 노트 전체를 사용하고, 로컬 그래프는 가져오지 않습니다. 색 그룹은 <code>path:</code>·<code>tag:</code> 조건을 지원하며, 모든 검색 조건이나 화살표·텍스트 페이드 설정이 그대로 따라오지는 않아요.</p>
+    </section>
+
+    <section id="share-export" class="section">
+      <h2 data-ko="테마를 공유하고 그래프를 저장하기" data-en="Share a theme, save a graph">테마를 공유하고 그래프를 저장하기</h2>
+      <h3 data-ko="프리셋 공유" data-en="Share a preset">프리셋 공유</h3>
+      <p class="muted" data-ko="내 프리셋 옆의 📋를 누르면 공유 코드가 복사돼요. 받는 사람은 <b>공유 코드 → 공유 코드 붙여넣기 → 가져오기</b>로 추가한 뒤 직접 눌러 적용합니다. 필터와 표시도 저장하려면 커스터마이즈의 <b>필터·표시 포함</b>을 켜고 저장하세요. 로컬 그래프의 필터는 바꾸지 않아요." data-en="Select 📋 beside a custom preset to copy its code. The recipient uses <b>Share code → Paste a share code → Import share code</b>, then selects the imported preset to apply it. To save filters and display too, enable <b>Include filters and display</b> in Customize before saving. Local graph filters stay separate.">내 프리셋 옆의 📋를 누르면 공유 코드가 복사돼요. 받는 사람은 <b>공유 코드 → 공유 코드 붙여넣기 → 가져오기</b>로 추가한 뒤 직접 눌러 적용합니다. 필터와 표시도 저장하려면 커스터마이즈의 <b>필터·표시 포함</b>을 켜고 저장하세요. 로컬 그래프의 필터는 바꾸지 않아요.</p>
+      <h3 data-ko="2D 그래프를 PNG로" data-en="Export a 2D graph as PNG">2D 그래프를 PNG로</h3>
+      <p class="muted" data-ko="전체 그래프나 노트의 로컬 그래프를 선택한 다음 <b>이미지 내보내기</b>에서 PNG 저장 또는 이미지 복사를 누르세요. 패널에서는 마지막으로 선택한 그래프를 사용해요. 기본 저장 폴더는 <code>Graph Styler exports</code>이며, 저장 후 경로와 열기 버튼이 표시됩니다." data-en="Select a global or local graph, then use <b>Export image</b> to save a PNG or copy an image. The panel uses the graph selected most recently. The default folder is <code>Graph Styler exports</code>; the result shows its path and an Open button.">전체 그래프나 노트의 로컬 그래프를 선택한 다음 <b>이미지 내보내기</b>에서 PNG 저장 또는 이미지 복사를 누르세요. 패널에서는 마지막으로 선택한 그래프를 사용해요. 기본 저장 폴더는 <code>Graph Styler exports</code>이며, 저장 후 경로와 열기 버튼이 표시됩니다.</p>
+      <p class="muted" data-ko="게시물용이면 비율을 <b>4:5</b>로, 추가 옵션에서 <b>그래프 전체 맞춤</b>과 <b>2x</b>를 선택해 보세요. 여백을 더하는 방식이라 노트를 자르지 않아요. 날짜·노트 수·프리셋 이름도 넣을 수 있고, 내보내기 옵션은 실제 그래프 설정을 바꾸지 않습니다. 이 내보내기는 2D 전체·로컬 그래프용이에요." data-en="For a post, try <b>4:5</b>, then <b>Fit whole graph</b> and <b>2x</b> under More options. Padding avoids cropping notes. Add a date, note count or preset name if useful. Export options do not change graph settings. This export is for 2D global and local graphs.">게시물용이면 비율을 <b>4:5</b>로, 추가 옵션에서 <b>그래프 전체 맞춤</b>과 <b>2x</b>를 선택해 보세요. 여백을 더하는 방식이라 노트를 자르지 않아요. 날짜·노트 수·프리셋 이름도 넣을 수 있고, 내보내기 옵션은 실제 그래프 설정을 바꾸지 않습니다. 이 내보내기는 2D 전체·로컬 그래프용이에요.</p>
+    </section>
+
+    <section id="updates" class="section">
+      <h2 data-ko="이미 설치했다면" data-en="Already installed?">이미 설치했다면</h2>
+      <p class="muted" data-ko="<b>설정 → 커뮤니티 플러그인 → 업데이트 확인</b>에서 Graph Styler를 업데이트하세요. 버전이 <b>0.4.1</b>인지 확인하면 됩니다. 수동 설치는 GitHub 릴리스의 <code>main.js</code>·<code>manifest.json</code>·<code>styles.css</code> 세 파일을 플러그인 폴더에 넣는 방식이에요." data-en="Use <b>Settings → Community plugins → Check for updates</b> and update Graph Styler. Check that its version is <b>0.4.1</b>. For manual installation, put the release's <code>main.js</code>, <code>manifest.json</code> and <code>styles.css</code> in the plugin folder."><b>설정 → 커뮤니티 플러그인 → 업데이트 확인</b>에서 Graph Styler를 업데이트하세요. 버전이 <b>0.4.1</b>인지 확인하면 됩니다. 수동 설치는 GitHub 릴리스의 <code>main.js</code>·<code>manifest.json</code>·<code>styles.css</code> 세 파일을 플러그인 폴더에 넣는 방식이에요.</p>
+      <p class="muted small" data-ko="확인일: 2026-10-14 · 데스크톱 전용 · 가이드: @phd.ai.log · 플러그인: Moonweave" data-en="Checked: 2026-10-14 · Desktop only · Guide: @phd.ai.log · Plugin: Moonweave">확인일: 2026-10-14 · 데스크톱 전용 · 가이드: @phd.ai.log · 플러그인: Moonweave</p>
+      <p class="source-links"><a href="https://github.com/moonweave/obsidian-graph-styler/releases/tag/0.4.1" data-ko="0.4.1 릴리스 ↗" data-en="0.4.1 release ↗">0.4.1 릴리스 ↗</a> · <a href="https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/README.ko.md" data-ko="전체 사용법 ↗" data-en="Full documentation ↗">전체 사용법 ↗</a> · <a href="https://obsidian.md/help/plugins/graph" data-ko="옵시디언 그래프 도움말 ↗" data-en="Obsidian graph help ↗">옵시디언 그래프 도움말 ↗</a></p>
+    </section>
+    </article>
 
     <!-- CTA -->
     <section class="section closer">

@@ -1,0 +1,9 @@
+{
+  "publicTitle": "Graph Styler 사용 가이드",
+  "pageTitle": "Graph Styler — 옵시디언 그래프, 클릭 한 번으로",
+  "route": "/",
+  "audience": "Graph Styler를 설치하거나 업데이트하려는 Obsidian 데스크톱 사용자",
+  "guideQuestion": "기존 그래프 설정을 지키면서 테마와 3D를 사용하고 결과를 공유하려면?",
+  "visibility": "public",
+  "creator": { "displayName": "phd.ai.log", "handle": "@phd.ai.log", "watermark": "@phd.ai.log" }
+}
