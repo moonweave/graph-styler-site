@@ -3,21 +3,21 @@
   "pluginVersion": "0.4.1",
   "obsidianVersion": "1.14.4",
   "locale": "en",
-  "vault": "Graph Styler Demo",
-  "notes": 72,
-  "data": "Synthetic Research, Projects, Reading and Ideas notes; no private vault data",
+  "vault": "research-wiki",
+  "appTheme": "dark",
+  "notes": 2054,
+  "data": "Actual research wiki; one administrative note filtered out for public PNG; only general topic hub titles visible",
   "source": "https://github.com/moonweave/obsidian-graph-styler/releases/tag/0.4.1",
   "mainJsSha256": "6b3f86b1a448c38ec4825c1597c9c1ba5ad52d5c8ede8d2f5bca523548ebf793",
   "manifestSha256": "0b9c85edca0fc311378ae49e3a9af9e16dc2a6838319fd7bd3defe6e43bc2e69",
   "captureMethod": "cua_repl native Obsidian screenshots saved unchanged; CSS displays the right-hand panel and full-size links open the raw capture",
-  "captures": ["share.jpg", "3d-panel.jpg", "3d-layouts.jpg"],
   "researchVaultCaptures": {
     "directory": "assets/research-041",
     "vault": "research-wiki",
     "privacy": "Search/file sidebar closed; note titles not visible; no note contents captured",
-    "captures": ["overview.jpg", "vaporwave.jpg", "sunset.jpg", "groups.jpg", "customize.jpg", "export-options.jpg"],
+    "captures": ["overview.jpg", "vaporwave.jpg", "sunset.jpg", "groups.jpg", "customize.jpg", "export-options.jpg", "share.jpg", "3d-panel.jpg", "3d-layouts.jpg"],
     "size": [3024, 1898]
   },
   "generatedResult": "export-result.png",
-  "export": { "aspect": "4:5", "scale": 2, "fit": true, "caption": ["date", "notes", "preset"], "size": [1520, 1900], "trigger": "Actual Export graph as PNG UI button" }
+  "export": { "preset": "Vaporwave", "aspect": "4:5", "scale": 2, "fit": true, "caption": ["date", "notes", "preset"], "size": [4672, 5840], "trigger": "Actual Export graph as PNG UI button" }
 }

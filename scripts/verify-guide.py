@@ -77,6 +77,7 @@ for filename in ("index.html", "en/index.html"):
             assert local.exists(), f"missing local file: {local}"
     pages.append(page)
     assert "assets/ui/" not in html, "historical UI capture still referenced"
+    assert "assets/ui-041/" not in html, "demo capture still referenced instead of research-wiki"
     ui_images = page.images
     expected = {"overview.jpg", "vaporwave.jpg", "sunset.jpg", "groups.jpg", "customize.jpg", "share.jpg", "3d-panel.jpg", "3d-layouts.jpg", "export-options.jpg", "export-result.png"}
     assert {Path(image["src"]).name for image in ui_images} == expected, "current capture coverage incomplete"
