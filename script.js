@@ -5,8 +5,8 @@
     en: "Graph Styler — Your Obsidian graph, one click away"
   };
   var DESCRIPTIONS = {
-    ko: "옵시디언 그래프 뷰를 클릭 한 번으로 예쁘게. 14가지 프리셋 + 나만의 테마. CSS도, 설정도 필요 없어요.",
-    en: "Make your Obsidian graph view beautiful in one click. 14 presets, custom themes, no CSS setup."
+    ko: "Graph Styler 0.4.1 사용 가이드. 테마 적용, 내 색상 그룹 유지, 실험적 3D, 프리셋 공유와 PNG 저장까지.",
+    en: "Graph Styler 0.4.1 guide: themes, color group preservation, experimental 3D, sharing and PNG export."
   };
 
   function setLang(lang) {
