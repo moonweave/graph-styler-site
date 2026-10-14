@@ -77,8 +77,8 @@ for filename in ("index.html", "en/index.html"):
             assert local.exists(), f"missing local file: {local}"
     pages.append(page)
     assert "assets/ui/" not in html, "historical UI capture still referenced"
-    ui_images = [image for image in page.images if "/ui-041/" in image.get("src", "")]
-    expected = {"groups.jpg", "customize.jpg", "share.jpg", "3d-panel.jpg", "3d-layouts.jpg", "export-options.jpg", "export-result.png"}
+    ui_images = page.images
+    expected = {"overview.jpg", "vaporwave.jpg", "sunset.jpg", "groups.jpg", "customize.jpg", "share.jpg", "3d-panel.jpg", "3d-layouts.jpg", "export-options.jpg", "export-result.png"}
     assert {Path(image["src"]).name for image in ui_images} == expected, "current capture coverage incomplete"
     for image in ui_images:
         data = (file.parent / image["src"]).read_bytes()
@@ -89,4 +89,8 @@ assert pages[0].sections == pages[1].sections, "language sections drifted"
 english = (ROOT / "en/index.html").read_text()
 assert not re.search(r"[가-힣]", english), "untranslated Korean on English page"
 assert 'href="../?lang=ko"' in english, "English page needs a working Korean link"
+css = (ROOT / "style.css").read_text()
+for selector in (".hero-shot img", ".gallery img"):
+    rule = re.search(re.escape(selector) + r"\s*\{([^}]+)\}", css)
+    assert rule and re.search(r"height:\s*auto\s*;", rule[1]), f"{selector} must preserve rendered image ratio"
 print("Guide structure, current screenshot coverage, JPEG/PNG dimensions and English navigation passed")
