@@ -7,6 +7,25 @@ import struct
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def image_size(data):
+    if data.startswith(b"\x89PNG\r\n\x1a\n"):
+        return struct.unpack(">II", data[16:24])
+    assert data.startswith(b"\xff\xd8"), "expected PNG or JPEG capture"
+    offset = 2
+    while offset < len(data):
+        assert data[offset] == 0xFF
+        while data[offset] == 0xFF:
+            offset += 1
+        marker = data[offset]
+        offset += 1
+        length = struct.unpack(">H", data[offset:offset + 2])[0]
+        if marker in {0xC0, 0xC1, 0xC2}:
+            height, width = struct.unpack(">HH", data[offset + 3:offset + 7])
+            return width, height
+        offset += length
+    raise AssertionError("JPEG dimensions missing")
+
+
 class Page(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -57,15 +76,17 @@ for filename in ("index.html", "en/index.html"):
             local = file.parent / link.split("?")[0].split("#")[0]
             assert local.exists(), f"missing local file: {local}"
     pages.append(page)
-    ui_images = [image for image in page.images if "/ui/" in image.get("src", "")]
-    assert len(ui_images) == 5, "five instructional screenshots required"
+    assert "assets/ui/" not in html, "historical UI capture still referenced"
+    ui_images = [image for image in page.images if "/ui-041/" in image.get("src", "")]
+    expected = {"groups.jpg", "customize.jpg", "share.jpg", "3d-panel.jpg", "3d-layouts.jpg", "export-options.jpg", "export-result.png"}
+    assert {Path(image["src"]).name for image in ui_images} == expected, "current capture coverage incomplete"
     for image in ui_images:
         data = (file.parent / image["src"]).read_bytes()
-        width, height = struct.unpack(">II", data[16:24])
+        width, height = image_size(data)
         assert (int(image["width"]), int(image["height"])) == (width, height), "image aspect ratio mismatch"
         assert image.get("alt"), "screenshot needs alt text"
 assert pages[0].sections == pages[1].sections, "language sections drifted"
 english = (ROOT / "en/index.html").read_text()
 assert not re.search(r"[가-힣]", english), "untranslated Korean on English page"
 assert 'href="../?lang=ko"' in english, "English page needs a working Korean link"
-print("Guide structure, sections, assets, anchors, five screenshot dimensions and English navigation passed")
+print("Guide structure, current screenshot coverage, JPEG/PNG dimensions and English navigation passed")

@@ -7,7 +7,7 @@
   <meta name="description" content="Graph Styler 0.4.1 guide: themes, color group preservation, experimental 3D, sharing and PNG export.">
   <meta property="og:title" content="Graph Styler">
   <meta property="og:description" content="Themes, your own color groups, experimental 3D and PNG export.">
-  <meta property="og:image" content="https://graph-styler.pages.dev/assets/hero.png">
+  <meta property="og:image" content="https://graph-styler.pages.dev/assets/ui-041/groups.jpg">
   <meta property="og:url" content="https://graph-styler.pages.dev/en/">
   <link rel="canonical" href="https://graph-styler.pages.dev/en/">
   <link rel="alternate" hreflang="ko" href="https://graph-styler.pages.dev/">
@@ -46,7 +46,7 @@
         </div>
       </div>
       <figure class="hero-shot">
-        <img src="../assets/hero.png" alt="Graph Styler in Obsidian" loading="eager">
+        <a href="../assets/ui-041/groups.jpg"><img src="../assets/ui-041/groups.jpg" alt="Graph Styler 0.4.1 running in Obsidian 1.14.4 with Keep my color groups enabled" width="2048" height="1600" loading="eager"></a>
       </figure>
     </section>
 
@@ -64,10 +64,10 @@
 
     <!-- PRESETS -->
     <section id="presets" class="section">
-      <h2>Same vault, one click apart</h2>
+      <h2>From the app to a PNG</h2>
       <div class="gallery">
-        <figure><img src="../assets/vaporwave.png" alt="Vaporwave preset" loading="lazy"><figcaption>🌴 Vaporwave</figcaption></figure>
-        <figure><img src="../assets/sunset.png" alt="Sunset preset" loading="lazy"><figcaption>🌅 Sunset</figcaption></figure>
+        <figure><a href="../assets/ui-041/share.jpg"><img src="../assets/ui-041/share.jpg" width="2048" height="1600" alt="Current 0.4.1 app with a saved demo preset and Share code panel" loading="lazy"></a><figcaption>0.4.1 running in a demo vault</figcaption></figure>
+        <figure><a href="../assets/ui-041/export-result.png"><img src="../assets/ui-041/export-result.png" width="1520" height="1900" alt="PNG exported by Graph Styler 0.4.1 with 72 demo notes" loading="lazy"></a><figcaption>4:5 PNG saved from the same version · Neon</figcaption></figure>
       </div>
       <div class="chips">
         <span>⚡ Neon</span><span>🌌 Galaxy</span><span>🌠 Aurora</span><span>🌅 Sunset</span>
@@ -177,7 +177,7 @@
     <!-- USAGE -->
     <section id="usage" class="section">
       <h2>How to use</h2>
-      <p class="muted small">These are existing public UI captures. Open an image to see it at full size. The new 0.4.1 group-preservation option and newer 3D selectors are not shown in these earlier captures.</p>
+      <p class="muted small">Captured on 2026-10-14 in Graph Styler 0.4.1 and Obsidian 1.14.4, using English UI and 72 demo notes rather than private data. Panels are enlarged here; open an image for the unedited full-window capture.</p>
       <ol class="steps big-steps">
         <li><span class="n">1</span><span>Open the graph view and click the <b>🎨 palette icon</b> in the left ribbon — a panel opens on the right.</span></li>
         <li><span class="n">2</span><span><b>Tap a preset</b> — the graph restyles instantly. Keep the panel open while you move the graph.</span></li>
@@ -190,7 +190,7 @@
     <section id="customize" class="section">
     <div class="visual-step">
       <figure class="ui-shot">
-        <a href="../assets/ui/customize.png"><img src="../assets/ui/customize.png" width="576" height="904" loading="lazy" alt="Customize panel with color pickers, physics sliders and Save as preset"></a>
+        <a class="ui-panel ui-panel--customize" href="../assets/ui-041/customize.jpg"><img src="../assets/ui-041/customize.jpg" width="2048" height="1600" loading="lazy" alt="0.4.1 Customize panel with disabled group color pickers while group preservation is on"></a>
         <figcaption>Customize panel · filter inclusion and Save are at the bottom. Open for full size.</figcaption>
       </figure>
       <div class="visual-copy">
@@ -207,20 +207,28 @@
     <article aria-label="Graph Styler guide">
     <section id="keep-groups" class="section">
       <h2>Keep the colors you use to classify notes</h2>
+      <div class="visual-step">
+        <figure class="ui-shot">
+          <a class="ui-panel ui-panel--groups" href="../assets/ui-041/groups.jpg"><img src="../assets/ui-041/groups.jpg" width="2048" height="1600" loading="lazy" alt="New Keep my color groups checkbox checked in Graph Styler 0.4.1"></a>
+          <figcaption>Keep my color groups above the presets, enabled in the actual 0.4.1 UI.</figcaption>
+        </figure>
+        <div class="visual-copy">
       <p class="big">If you already use group colors, turn on <b>Keep my color groups</b> before applying a preset. New in 0.4.1.</p>
       <ul class="muted">
         <li>Rules, order and colors stay intact, including with Mono and live preview. Glow can still change apparent brightness.</li>
         <li>Off by default. When on, group color pickers are disabled and local graphs keep their own groups. The setting stays in this vault and is not shared in a preset code.</li>
         <li>It does not recover previously replaced groups. With it off, presets apply automatic groups and Mono clears groups.</li>
       </ul>
+        </div>
+      </div>
     </section>
 
     <section id="graph3d" class="section">
       <h2>Open the 3D graph</h2>
       <div class="visual-step">
         <figure class="ui-shot">
-          <a href="../assets/ui/3d-panel.png"><img src="../assets/ui/3d-panel.png" width="538" height="474" loading="lazy" alt="3D panel showing enable, Open 3D graph, auto-rotate and rotation speed"></a>
-          <figcaption>Earlier 3D panel capture · enable, then Open. The newer Look and Layout selectors are not shown.</figcaption>
+          <a class="ui-panel ui-panel--3d" href="../assets/ui-041/3d-panel.jpg"><img src="../assets/ui-041/3d-panel.jpg" width="2048" height="1600" loading="lazy" alt="Current 3D panel with Look, Orbital layout, Orbital center and auto-rotate controls"></a>
+          <figcaption>Current 3D panel · Look controls appearance, Layout controls arrangement. Orbital enables the center input.</figcaption>
         </figure>
         <div class="visual-copy">
       <p class="big">Expand <b>🧊 3D (experimental)</b>, enable the view and select <b>Open 3D graph</b>. Off by default; experimental behavior may change.</p>
@@ -238,6 +246,10 @@
           </tbody>
         </table>
       </div>
+      <figure class="ui-shot ui-menu-shot">
+        <a class="ui-panel ui-panel--3d" href="../assets/ui-041/3d-layouts.jpg"><img src="../assets/ui-041/3d-layouts.jpg" width="2048" height="1600" loading="lazy" alt="Actual Layout dropdown showing Force graph, Orbital and Globe in 0.4.1"></a>
+        <figcaption>The actual Layout dropdown: Force graph, Orbital and Globe.</figcaption>
+      </figure>
       <p class="muted">Drag to rotate, scroll or pinch to zoom, Shift-drag or right-drag to pan. Hover for a name and highlighted links; click to open the note. Auto-rotate can be turned off.</p>
       <p class="tip"><b>Reopen the 3D tab after changing filters.</b> It snapshots visible nodes and links from the open global graph; filters do not update live. Without a global graph it uses all Markdown notes, not the local graph. Color groups support <code>path:</code> and <code>tag:</code>; arbitrary queries, arrows and text-fade settings do not all carry over.</p>
     </section>
@@ -246,7 +258,7 @@
       <h2>Share a theme, save a graph</h2>
       <div class="visual-step">
         <figure class="ui-shot">
-          <a href="../assets/ui/share.png"><img src="../assets/ui/share.png" width="576" height="522" loading="lazy" alt="Custom preset copy button and Share code paste-and-import panel"></a>
+          <a class="ui-panel ui-panel--share" href="../assets/ui-041/share.jpg"><img src="../assets/ui-041/share.jpg" width="2048" height="1600" loading="lazy" alt="0.4.1 saved Demo theme and Share code paste-and-import panel"></a>
           <figcaption>Use 📋 beside a preset to send it; paste and Import below to receive one.</figcaption>
         </figure>
         <div class="visual-copy">
@@ -256,8 +268,8 @@
       </div>
       <div class="visual-step">
         <figure class="ui-shot">
-          <a href="../assets/ui/export-options.png"><img src="../assets/ui/export-options.png" width="576" height="1424" loading="lazy" alt="Export panel set to 4:5, with PNG and Copy buttons, 2x scale and Fit whole graph"></a>
-          <figcaption>4:5 → More options → 2x and Fit whole graph. Save and Copy are near the top.</figcaption>
+          <a class="ui-panel ui-panel--export" href="../assets/ui-041/export-options.jpg"><img src="../assets/ui-041/export-options.jpg" width="2048" height="1600" loading="lazy" alt="0.4.1 Export graph as PNG, Copy image, 2x scale, Fit whole graph and caption controls"></a>
+          <figcaption>Current More options: 2x, Fit whole graph and captions. The purple button above saves the PNG.</figcaption>
         </figure>
         <div class="visual-copy">
       <h3>Export a 2D graph as PNG</h3>
@@ -266,7 +278,7 @@
         </div>
       </div>
       <figure class="ui-result">
-        <a href="../assets/ui/export-post-ready.png"><img src="../assets/ui/export-post-ready.png" width="1080" height="1350" loading="lazy" alt="Example 4:5 PNG export with hub names and a date, note-count and preset caption"></a>
+        <a href="../assets/ui-041/export-result.png"><img src="../assets/ui-041/export-result.png" width="1520" height="1900" loading="lazy" alt="Fresh 0.4.1 Neon PNG export with 72 demo notes and the 2026.10.14 caption"></a>
         <figcaption>Example output · 4:5 padding, hub names and a footer caption in the actual PNG.</figcaption>
       </figure>
     </section>

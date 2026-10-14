@@ -119,6 +119,18 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px)
 .ui-shot, .ui-result { margin: 0; }
 .ui-shot img, .ui-result img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 12px; }
 .ui-shot a, .ui-result a { display: block; }
+.ui-panel { position: relative; overflow: hidden; aspect-ratio: 600 / 1600; background: #f5f5f5; }
+.ui-shot .ui-panel img { position: absolute; top: 0; right: 0; width: 341.333333%; max-width: none; height: auto; border: 0; border-radius: 0; }
+.ui-panel--groups { aspect-ratio: 600 / 650; }
+.ui-panel--customize { aspect-ratio: 600 / 1100; }
+.ui-shot .ui-panel--customize img { top: -10.909091%; }
+.ui-panel--3d { aspect-ratio: 600 / 1000; }
+.ui-shot .ui-panel--3d img { top: -50%; }
+.ui-panel--share { aspect-ratio: 600 / 650; }
+.ui-shot .ui-panel--share img { top: -92.307692%; }
+.ui-panel--export { aspect-ratio: 600 / 1200; }
+.ui-shot .ui-panel--export img { top: -10%; }
+.ui-menu-shot { max-width: 440px; margin: 24px auto; }
 .ui-shot figcaption, .ui-result figcaption { color: var(--muted); font-size: 14px; line-height: 1.6; margin-top: 12px; }
 .visual-copy h3 { margin-top: 0; }
 .ui-result { max-width: 600px; margin: 36px auto 0; }
