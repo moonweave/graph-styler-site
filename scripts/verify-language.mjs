@@ -8,7 +8,8 @@ const elements = [...html.matchAll(/<(?:img|a)\b[^>]*data-en-(?:src|href)=[^>]*>
   const attrs = Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map(([, key, value]) => [key, value]));
   return { attrs, getAttribute: (key) => attrs[key], setAttribute: (key, value) => { attrs[key] = value; } };
 });
-assert.equal(elements.length, 8);
+assert.equal(elements.length, 0, 'Both languages intentionally use the same current English UI captures');
+assert(!html.includes('assets/ui/'), 'Historical screenshots must not return through language switching');
 const buttons = ['ko', 'en'].map((lang) => ({
   dataset: { lang }, classList: { toggle() {} },
   addEventListener(_, callback) { this.click = callback; },
@@ -29,6 +30,7 @@ vm.runInNewContext(fs.readFileSync(new URL('script.js', root), 'utf8'), {
 for (const lang of ['en', 'ko', 'en']) {
   buttons.find((button) => button.dataset.lang === lang).click();
   assert.equal(document.documentElement.lang, lang);
+  assert(document.title.includes(lang === 'en' ? 'Your Obsidian graph' : '옵시디언 그래프'));
   for (const element of elements) {
     for (const attr of ['src', 'href', 'height']) {
       if (`data-${lang}-${attr}` in element.attrs) {
@@ -37,4 +39,4 @@ for (const lang of ['en', 'ko', 'en']) {
     }
   }
 }
-console.log('Language switch updates screenshot sources, full-size links and dimensions');
+console.log('Language switch updates language and title while sharing current UI captures');
