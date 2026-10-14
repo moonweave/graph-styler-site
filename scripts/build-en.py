@@ -23,6 +23,11 @@ class EnglishPage(HTMLParser):
         attrs = dict(attrs)
         translation = attrs.pop("data-en", None)
         attrs.pop("data-ko", None)
+        for key in ("src", "href", "height"):
+            translated = attrs.pop(f"data-en-{key}", None)
+            attrs.pop(f"data-ko-{key}", None)
+            if translated is not None:
+                attrs[key] = translated
         if tag == "html":
             attrs["lang"] = "en"
         if tag == "meta" and attrs.get("name") == "description":

@@ -115,6 +115,18 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px)
 .big { font-size: clamp(17px, 2.1vw, 21px); color: #cdd9ea; max-width: 64ch; }
 .muted { color: var(--muted); }
 .small { font-size: 14px; }
+.visual-step { display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 1fr); gap: 36px; align-items: start; margin: 32px 0 48px; }
+.ui-shot, .ui-result { margin: 0; }
+.ui-shot img, .ui-result img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 12px; }
+.ui-shot a, .ui-result a { display: block; }
+.ui-shot figcaption, .ui-result figcaption { color: var(--muted); font-size: 14px; line-height: 1.6; margin-top: 12px; }
+.visual-copy h3 { margin-top: 0; }
+.ui-result { max-width: 600px; margin: 36px auto 0; }
+@media (max-width: 820px) {
+  .visual-step { grid-template-columns: 1fr; gap: 20px; }
+  .ui-shot { width: 100%; max-width: 440px; margin: 0 auto; }
+  .visual-copy { grid-row: 1; }
+}
 .source-links a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .table-scroll { overflow-x: auto; margin: 24px 0; }
 .table-scroll table { width: 100%; border-collapse: collapse; min-width: 560px; }

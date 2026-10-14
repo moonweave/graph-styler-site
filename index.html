@@ -106,7 +106,7 @@
       <p class="muted" data-ko="기본 테마는 색·배경·글로우만 바꿔요. 물리를 바꾸고 싶을 때는 그래프 설정이나 커스터마이즈에서 직접 조절하세요. <b>커스텀 프리셋에는 물리 설정도 저장</b>되므로 적용할 때 달라질 수 있어요." data-en="Built-in presets change colors, background and glow only. Adjust physics in the graph settings or Customize when you want to. <b>Custom presets also save physics settings</b>, so applying one can change them.">기본 테마는 색·배경·글로우만 바꿔요. 물리를 바꾸고 싶을 때는 그래프 설정이나 커스터마이즈에서 직접 조절하세요. <b>커스텀 프리셋에는 물리 설정도 저장</b>되므로 적용할 때 달라질 수 있어요.</p>
 
       <h3 data-ko="직접 해보기 — 글로우 CSS" data-en="Try it yourself — glow CSS">직접 해보기 — 글로우 CSS</h3>
-      <p class="muted small" data-ko="플러그인(Obsidian에 기능을 더하는 확장) 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)" data-en="Want just the glow without the plugin (an add-on that extends Obsidian)? Save the code below as <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. Built for dark mode. (Graph Styler does this for you.)">플러그인(Obsidian에 기능을 더하는 확장) 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)</p>
+      <p class="muted small" data-ko="플러그인(Obsidian에 기능을 더하는 확장) 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&amp;lt;vault&amp;gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)" data-en="Want just the glow without the plugin (an add-on that extends Obsidian)? Save the code below as <code>&amp;lt;vault&amp;gt;/.obsidian/snippets/graph-glow.css</code> and enable it in <b>Settings → Appearance → CSS snippets</b>. Built for dark mode. (Graph Styler does this for you.)">플러그인(Obsidian에 기능을 더하는 확장) 없이 글로우만 직접 넣고 싶다면: 아래 코드를 <code>&lt;vault&gt;/.obsidian/snippets/graph-glow.css</code> 파일로 저장하고 <b>설정 → 화면 → CSS 스니펫</b>에서 켜세요. 다크 모드 기준이에요. (Graph Styler를 쓰면 이건 자동이에요.)</p>
       <div class="snippet">
         <pre><code>/* graph glow — .obsidian/snippets/graph-glow.css */
 .theme-dark .graph-view.color-circle { color: #7dd3fc; }
@@ -177,6 +177,7 @@
     <!-- USAGE -->
     <section id="usage" class="section">
       <h2 data-ko="사용법" data-en="How to use">사용법</h2>
+      <p class="muted small" data-ko="아래는 공개된 실제 UI 캡처예요. 이미지를 누르면 원본 크기로 볼 수 있습니다. 0.4.1의 새 그룹 보존 옵션과 추가된 3D 선택 항목은 이전 캡처에 없어요." data-en="These are existing public UI captures. Open an image to see it at full size. The new 0.4.1 group-preservation option and newer 3D selectors are not shown in these earlier captures.">아래는 공개된 실제 UI 캡처예요. 이미지를 누르면 원본 크기로 볼 수 있습니다. 0.4.1의 새 그룹 보존 옵션과 추가된 3D 선택 항목은 이전 캡처에 없어요.</p>
       <ol class="steps big-steps">
         <li><span class="n">1</span><span data-ko="그래프 뷰를 열고, 왼쪽 리본의 <b>🎨 팔레트 아이콘</b>을 누르면 오른쪽에 패널이 떠요." data-en="Open the graph view and click the <b>🎨 palette icon</b> in the left ribbon — a panel opens on the right.">그래프 뷰를 열고, 왼쪽 리본의 <b>🎨 팔레트 아이콘</b>을 누르면 오른쪽에 패널이 떠요.</span></li>
         <li><span class="n">2</span><span data-ko="<b>프리셋을 누르면</b> 그래프가 즉시 바뀝니다. 패널은 열어둔 채 그래프를 움직여도 돼요." data-en="<b>Tap a preset</b> — the graph restyles instantly. Keep the panel open while you move the graph.">
@@ -192,6 +193,23 @@
 <b>색은 어떻게 매핑되나요?</b> 내 vault에서 노트가 많은 폴더(폴더가 없으면 태그)에 프리셋 색이 자동으로 입혀져요. 옵시디언의 네이티브 그래프 그룹에 기록되니 설정에서 직접 수정도 됩니다.</p>
     </section>
 
+    <section id="customize" class="section">
+    <div class="visual-step">
+      <figure class="ui-shot">
+        <a href="assets/ui/customize-ko.png" data-ko-href="assets/ui/customize-ko.png" data-en-href="assets/ui/customize.png"><img src="assets/ui/customize-ko.png" data-ko-src="assets/ui/customize-ko.png" data-en-src="assets/ui/customize.png" width="576" height="904" loading="lazy" alt="Customize panel with color pickers, physics sliders and Save as preset" /></a>
+        <figcaption data-ko="커스터마이즈 패널 · 아래쪽에 필터 포함과 저장 버튼이 있어요. 누르면 확대됩니다." data-en="Customize panel · filter inclusion and Save are at the bottom. Open for full size.">커스터마이즈 패널 · 아래쪽에 필터 포함과 저장 버튼이 있어요. 누르면 확대됩니다.</figcaption>
+      </figure>
+      <div class="visual-copy">
+        <h2 data-ko="화면 보면서 내 테마 저장하기" data-en="Save your theme from this panel">화면 보면서 내 테마 저장하기</h2>
+        <ol class="steps">
+          <li><span class="n">1</span><span data-ko="위쪽 <b>그룹 색·배경·글로우</b>부터 조절하세요." data-en="Start with <b>group colors, background and glow</b> at the top.">위쪽 <b>그룹 색·배경·글로우</b>부터 조절하세요.</span></li>
+          <li><span class="n">2</span><span data-ko="모양도 바꾸고 싶을 때만 아래 <b>물리 슬라이더</b>를 움직여요. 그래프에 바로 반영됩니다." data-en="Use the <b>physics sliders</b> only if you also want a different layout. Changes are live.">모양도 바꾸고 싶을 때만 아래 <b>물리 슬라이더</b>를 움직여요. 그래프에 바로 반영됩니다.</span></li>
+          <li><span class="n">3</span><span data-ko="맨 아래에 이름을 적고 <b>내 프리셋으로 저장</b>. 필터까지 기억하려면 그 위 체크박스도 켜세요." data-en="Enter a name at the bottom and select <b>Save as preset</b>. Check the filter option above it if needed.">맨 아래에 이름을 적고 <b>내 프리셋으로 저장</b>. 필터까지 기억하려면 그 위 체크박스도 켜세요.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    </section>
     <article aria-label="Graph Styler guide">
     <section id="keep-groups" class="section">
       <h2 data-ko="내 분류 색을 지키려면" data-en="Keep the colors you use to classify notes">내 분류 색을 지키려면</h2>
@@ -205,7 +223,15 @@
 
     <section id="graph3d" class="section">
       <h2 data-ko="3D는 이렇게 열어요" data-en="Open the 3D graph">3D는 이렇게 열어요</h2>
+      <div class="visual-step">
+        <figure class="ui-shot">
+          <a href="assets/ui/3d-panel-ko.png" data-ko-href="assets/ui/3d-panel-ko.png" data-en-href="assets/ui/3d-panel.png"><img src="assets/ui/3d-panel-ko.png" data-ko-src="assets/ui/3d-panel-ko.png" data-en-src="assets/ui/3d-panel.png" data-ko-height="442" data-en-height="474" width="538" height="442" loading="lazy" alt="3D panel showing enable, Open 3D graph, auto-rotate and rotation speed" /></a>
+          <figcaption data-ko="기존 3D 패널 캡처 · 켜기 → 열기 버튼 위치를 보세요. 최신 버전의 분위기·배치 선택은 이 캡처에 없습니다." data-en="Earlier 3D panel capture · enable, then Open. The newer Look and Layout selectors are not shown.">기존 3D 패널 캡처 · 켜기 → 열기 버튼 위치를 보세요. 최신 버전의 분위기·배치 선택은 이 캡처에 없습니다.</figcaption>
+        </figure>
+        <div class="visual-copy">
       <p class="big" data-ko="패널의 <b>🧊 3D (실험 기능)</b>을 펼쳐 3D를 켜고 <b>3D 그래프 열기</b>를 누르세요. 기본값은 꺼짐이며, 실험 기능이라 이후 바뀔 수 있어요." data-en="Expand <b>🧊 3D (experimental)</b>, enable the view and select <b>Open 3D graph</b>. Off by default; experimental behavior may change.">패널의 <b>🧊 3D (실험 기능)</b>을 펼쳐 3D를 켜고 <b>3D 그래프 열기</b>를 누르세요. 기본값은 꺼짐이며, 실험 기능이라 이후 바뀔 수 있어요.</p>
+        </div>
+      </div>
       <p class="muted" data-ko="<b>배치</b>와 <b>화면 분위기</b>는 별개예요. 배치는 Force·Orbital·Globe 세 가지, 분위기는 기본·Deep Space 두 가지입니다." data-en="<b>Layout</b> and <b>Look</b> are separate: three layouts (Force, Orbital, Globe) and two looks (Original, Deep Space)."><b>배치</b>와 <b>화면 분위기</b>는 별개예요. 배치는 Force·Orbital·Globe 세 가지, 분위기는 기본·Deep Space 두 가지입니다.</p>
       <div class="table-scroll" role="region" tabindex="0" aria-label="3D layouts">
         <table>
@@ -224,13 +250,32 @@
 
     <section id="share-export" class="section">
       <h2 data-ko="테마를 공유하고 그래프를 저장하기" data-en="Share a theme, save a graph">테마를 공유하고 그래프를 저장하기</h2>
+      <div class="visual-step">
+        <figure class="ui-shot">
+          <a href="assets/ui/share-ko.png" data-ko-href="assets/ui/share-ko.png" data-en-href="assets/ui/share.png"><img src="assets/ui/share-ko.png" data-ko-src="assets/ui/share-ko.png" data-en-src="assets/ui/share.png" width="576" height="522" loading="lazy" alt="Custom preset copy button and Share code paste-and-import panel" /></a>
+          <figcaption data-ko="위쪽 프리셋 옆 📋는 보내기, 아래 붙여넣기 칸과 가져오기 버튼은 받기예요." data-en="Use 📋 beside a preset to send it; paste and Import below to receive one.">위쪽 프리셋 옆 📋는 보내기, 아래 붙여넣기 칸과 가져오기 버튼은 받기예요.</figcaption>
+        </figure>
+        <div class="visual-copy">
       <h3 data-ko="프리셋 공유" data-en="Share a preset">프리셋 공유</h3>
       <p class="muted" data-ko="내 프리셋 옆의 📋를 누르면 공유 코드가 복사돼요. 받는 사람은 <b>공유 코드 → 공유 코드 붙여넣기 → 가져오기</b>로 추가한 뒤 직접 눌러 적용합니다. 필터와 표시도 저장하려면 커스터마이즈의 <b>필터·표시 포함</b>을 켜고 저장하세요. 로컬 그래프의 필터는 바꾸지 않아요." data-en="Select 📋 beside a custom preset to copy its code. The recipient uses <b>Share code → Paste a share code → Import share code</b>, then selects the imported preset to apply it. To save filters and display too, enable <b>Include filters and display</b> in Customize before saving. Local graph filters stay separate.">내 프리셋 옆의 📋를 누르면 공유 코드가 복사돼요. 받는 사람은 <b>공유 코드 → 공유 코드 붙여넣기 → 가져오기</b>로 추가한 뒤 직접 눌러 적용합니다. 필터와 표시도 저장하려면 커스터마이즈의 <b>필터·표시 포함</b>을 켜고 저장하세요. 로컬 그래프의 필터는 바꾸지 않아요.</p>
+        </div>
+      </div>
+      <div class="visual-step">
+        <figure class="ui-shot">
+          <a href="assets/ui/export-options-ko.png" data-ko-href="assets/ui/export-options-ko.png" data-en-href="assets/ui/export-options.png"><img src="assets/ui/export-options-ko.png" data-ko-src="assets/ui/export-options-ko.png" data-en-src="assets/ui/export-options.png" data-ko-height="1390" data-en-height="1424" width="576" height="1390" loading="lazy" alt="Export panel set to 4:5, with PNG and Copy buttons, 2x scale and Fit whole graph" /></a>
+          <figcaption data-ko="4:5 → 옵션 더 보기 → 2x·전체 그래프 맞추기. 저장과 복사 버튼은 위쪽에 있어요." data-en="4:5 → More options → 2x and Fit whole graph. Save and Copy are near the top.">4:5 → 옵션 더 보기 → 2x·전체 그래프 맞추기. 저장과 복사 버튼은 위쪽에 있어요.</figcaption>
+        </figure>
+        <div class="visual-copy">
       <h3 data-ko="2D 그래프를 PNG로" data-en="Export a 2D graph as PNG">2D 그래프를 PNG로</h3>
       <p class="muted" data-ko="전체 그래프나 노트의 로컬 그래프를 선택한 다음 <b>이미지 내보내기</b>에서 PNG 저장 또는 이미지 복사를 누르세요. 패널에서는 마지막으로 선택한 그래프를 사용해요. 기본 저장 폴더는 <code>Graph Styler exports</code>이며, 저장 후 경로와 열기 버튼이 표시됩니다." data-en="Select a global or local graph, then use <b>Export image</b> to save a PNG or copy an image. The panel uses the graph selected most recently. The default folder is <code>Graph Styler exports</code>; the result shows its path and an Open button.">전체 그래프나 노트의 로컬 그래프를 선택한 다음 <b>이미지 내보내기</b>에서 PNG 저장 또는 이미지 복사를 누르세요. 패널에서는 마지막으로 선택한 그래프를 사용해요. 기본 저장 폴더는 <code>Graph Styler exports</code>이며, 저장 후 경로와 열기 버튼이 표시됩니다.</p>
       <p class="muted" data-ko="게시물용이면 비율을 <b>4:5</b>로, 추가 옵션에서 <b>그래프 전체 맞춤</b>과 <b>2x</b>를 선택해 보세요. 여백을 더하는 방식이라 노트를 자르지 않아요. 날짜·노트 수·프리셋 이름도 넣을 수 있고, 내보내기 옵션은 실제 그래프 설정을 바꾸지 않습니다. 이 내보내기는 2D 전체·로컬 그래프용이에요." data-en="For a post, try <b>4:5</b>, then <b>Fit whole graph</b> and <b>2x</b> under More options. Padding avoids cropping notes. Add a date, note count or preset name if useful. Export options do not change graph settings. This export is for 2D global and local graphs.">게시물용이면 비율을 <b>4:5</b>로, 추가 옵션에서 <b>그래프 전체 맞춤</b>과 <b>2x</b>를 선택해 보세요. 여백을 더하는 방식이라 노트를 자르지 않아요. 날짜·노트 수·프리셋 이름도 넣을 수 있고, 내보내기 옵션은 실제 그래프 설정을 바꾸지 않습니다. 이 내보내기는 2D 전체·로컬 그래프용이에요.</p>
+        </div>
+      </div>
+      <figure class="ui-result">
+        <a href="assets/ui/export-post-ready.png"><img src="assets/ui/export-post-ready.png" width="1080" height="1350" loading="lazy" alt="Example 4:5 PNG export with hub names and a date, note-count and preset caption" /></a>
+        <figcaption data-ko="저장 결과 예시 · 4:5 여백과 중심 노트 이름, 하단 캡션이 실제 PNG에 들어간 모습이에요." data-en="Example output · 4:5 padding, hub names and a footer caption in the actual PNG.">저장 결과 예시 · 4:5 여백과 중심 노트 이름, 하단 캡션이 실제 PNG에 들어간 모습이에요.</figcaption>
+      </figure>
     </section>
-
     <section id="updates" class="section">
       <h2 data-ko="이미 설치했다면" data-en="Already installed?">이미 설치했다면</h2>
       <p class="muted" data-ko="<b>설정 → 커뮤니티 플러그인 → 업데이트 확인</b>에서 Graph Styler를 업데이트하세요. 버전이 <b>0.4.1</b>인지 확인하면 됩니다. 수동 설치는 GitHub 릴리스의 <code>main.js</code>·<code>manifest.json</code>·<code>styles.css</code> 세 파일을 플러그인 폴더에 넣는 방식이에요." data-en="Use <b>Settings → Community plugins → Check for updates</b> and update Graph Styler. Check that its version is <b>0.4.1</b>. For manual installation, put the release's <code>main.js</code>, <code>manifest.json</code> and <code>styles.css</code> in the plugin folder."><b>설정 → 커뮤니티 플러그인 → 업데이트 확인</b>에서 Graph Styler를 업데이트하세요. 버전이 <b>0.4.1</b>인지 확인하면 됩니다. 수동 설치는 GitHub 릴리스의 <code>main.js</code>·<code>manifest.json</code>·<code>styles.css</code> 세 파일을 플러그인 폴더에 넣는 방식이에요.</p>
