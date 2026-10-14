@@ -21,6 +21,11 @@
     document.querySelectorAll(".lang-btn").forEach(function (b) {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
+    ["src", "href", "height"].forEach(function (attr) {
+      document.querySelectorAll("[data-" + lang + "-" + attr + "]").forEach(function (el) {
+        el.setAttribute(attr, el.getAttribute("data-" + lang + "-" + attr));
+      });
+    });
     try { localStorage.setItem(STORE, lang); } catch (e) {}
   }
 
