@@ -137,6 +137,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px)
 .ui-shot .ui-panel--research-customize img { width: 504%; top: -48.888889%; }
 .ui-panel--research-export { aspect-ratio: 600 / 1350; }
 .ui-shot .ui-panel--research-export img { width: 504%; top: -11.851852%; }
+.ui-panel--research-3d { aspect-ratio: 600 / 700; }
+.ui-shot .ui-panel--research-3d img { width: 504%; top: -131.428571%; }
+.ui-panel--research-layout { aspect-ratio: 600 / 300; }
+.ui-shot .ui-panel--research-layout img { width: 504%; top: -406.666667%; }
+.ui-panel--research-share { aspect-ratio: 600 / 280; }
+.ui-shot .ui-panel--research-share img { width: 504%; top: -478.571429%; }
 .ui-menu-shot { max-width: 340px; margin: 24px auto; }
 .ui-panel--layout-menu { aspect-ratio: 600 / 300; }
 .ui-shot .ui-panel--layout-menu img { top: -306.666667%; }
