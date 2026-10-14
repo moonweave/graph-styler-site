@@ -8,7 +8,7 @@ Vanilla HTML/CSS/JS (no build). Bilingual (KO/EN toggle). Deployed to Cloudflare
 
 `index.html` is the canonical bilingual content source. After editing its `data-en` translations, run `python3 scripts/build-en.py` to regenerate `en/index.html`. Keep `sources.json` and the visible verification date aligned with product changes. The profile guide URL stays unchanged.
 
-`assets/ui-041/` contains fresh, unedited full-window captures taken through Computer Use on 2026-10-14, with Graph Styler 0.4.1 in Obsidian 1.14.4. Both guide languages use the same English UI captures with localized captions. CSS focuses on the right panel without altering image files; links open the complete originals. The PNG result was generated through the actual Export button. All notes are synthetic demo notes. See `capture-provenance.json` for the released-code hash and capture conditions. Historical `assets/ui/` files are retained but never referenced in the guide. Run `python3 scripts/verify-guide.py` to check nesting, local links, image dimensions and current-capture coverage.
+`assets/research-041/` contains actual research-wiki graph, Customize, group-preservation and export-option captures from Graph Styler 0.4.1 in Obsidian 1.14.4. Search/file sidebars and note titles are hidden. `assets/ui-041/` supplies synthetic-demo sharing and 3D settings plus an actual demo PNG export. Both languages use English UI captures. CSS enlarges panels without distorting images; links open originals. See `capture-provenance.json` for conditions. Historical `assets/ui/` files are retained but not referenced. Run `python3 scripts/verify-guide.py` to check structure, links, dimensions and coverage; actual browser rendering must also be inspected.
 
 ## Deploy
 ```
