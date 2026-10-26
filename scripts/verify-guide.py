@@ -67,7 +67,7 @@ for filename in ("index.html", "en/index.html"):
     page.feed(html)
     assert not page.stack, "unclosed elements"
     assert page.h1 == 1, "one H1 required"
-    assert "0.4.1" in html and "2026-10-14" in html
+    assert "0.4.2" in html and "2026-10-26" in html and "0.4.1" in html
     assert "graph-view-content" not in html, "obsolete CSS selector"
     for link in page.links:
         if link.startswith("#"):

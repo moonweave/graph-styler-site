@@ -31,7 +31,7 @@ class EnglishPage(HTMLParser):
         if tag == "html":
             attrs["lang"] = "en"
         if tag == "meta" and attrs.get("name") == "description":
-            attrs["content"] = "Graph Styler 0.4.1 guide: themes, color group preservation, experimental 3D, sharing and PNG export."
+            attrs["content"] = "Graph Styler 0.4.2 guide: themes, color group preservation, experimental 3D, sharing and PNG export."
         if tag == "link" and attrs.get("rel") == "canonical":
             attrs["href"] = "https://graph-styler.pages.dev/en/"
         if tag == "meta" and attrs.get("property") == "og:url":
