@@ -1,9 +1,40 @@
 {
-  "checkedAt": "2026-10-14",
+  "checkedAt": "2026-10-26",
   "claims": [
-    { "id": "release", "claim": "0.4.1 adds optional per-vault color group preservation, including Mono and preview; default off, no recovery of earlier groups.", "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/releases/tag/0.4.1", "verifiedAt": "2026-10-14", "volatility": "high" },
-    { "id": "usage", "claim": "Built-in presets preserve physics and sizes. Custom presets can save physics and optional filters. PNG export supports 2D global and local graphs; Restore restores the first backup.", "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/README.md", "verifiedAt": "2026-10-14", "volatility": "high" },
-    { "id": "3d", "claim": "Experimental 3D has Force, Orbital and Globe layouts, Original and Deep Space looks, and snapshot-based global filters with limited group-query support.", "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/README.ko.md", "verifiedAt": "2026-10-14", "volatility": "high" },
-    { "id": "css", "claim": "Graph color probes, view-content iframe filters and input pass-through selectors match the released CSS generator; manual snippets depend on private app internals.", "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/main.js", "verifiedAt": "2026-10-14", "volatility": "high" }
+    {
+      "id": "release",
+      "claim": "0.4.1 adds optional per-vault color group preservation, including Mono and preview; default off, no recovery of earlier groups.",
+      "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/releases/tag/0.4.1",
+      "verifiedAt": "2026-10-14",
+      "volatility": "high"
+    },
+    {
+      "id": "usage",
+      "claim": "Built-in presets preserve physics and sizes. Custom presets can save physics and optional filters. PNG export supports 2D global and local graphs; Restore restores the first backup.",
+      "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/README.md",
+      "verifiedAt": "2026-10-14",
+      "volatility": "high"
+    },
+    {
+      "id": "3d",
+      "claim": "Experimental 3D has Force, Orbital and Globe layouts, Original and Deep Space looks, and snapshot-based global filters with limited group-query support.",
+      "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/README.ko.md",
+      "verifiedAt": "2026-10-14",
+      "volatility": "high"
+    },
+    {
+      "id": "css",
+      "claim": "Graph color probes, view-content iframe filters and input pass-through selectors match the released CSS generator; manual snippets depend on private app internals.",
+      "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/blob/0.4.1/main.js",
+      "verifiedAt": "2026-10-14",
+      "volatility": "high"
+    },
+    {
+      "id": "release-042-controls",
+      "claim": "0.4.2 adds Start/Pause rotation and Refresh from 2D graph; refresh resets the camera and graph filters do not synchronize live. Existing guide captures remain 0.4.1.",
+      "sourceUrl": "https://github.com/moonweave/obsidian-graph-styler/releases/tag/0.4.2",
+      "verifiedAt": "2026-10-26",
+      "volatility": "high"
+    }
   ]
 }
